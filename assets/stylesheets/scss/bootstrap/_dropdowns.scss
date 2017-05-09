@@ -8,16 +8,14 @@
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: em(2px);
   vertical-align: middle;
-  border-top:   $caret-width-base dashed;
-  border-top:   $caret-width-base solid \9; // IE8
-  border-right: $caret-width-base solid transparent;
-  border-left:  $caret-width-base solid transparent;
+  @include rem(border-top,   $caret-width-base solid);
+  @include rem(border-right, $caret-width-base solid transparent);
+  @include rem(border-left,  $caret-width-base solid transparent);
 }
 
 // The dropdown wrapper (div)
-.dropup,
 .dropdown {
   position: relative;
 }
@@ -35,16 +33,16 @@
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  min-width: em(160px);
+  padding: em(5px) 0;
+  margin: em(2px) 0 0; // override default ul
   list-style: none;
-  font-size: $font-size-base;
+  font-size: em($font-size-base);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: $dropdown-bg;
   border: 1px solid $dropdown-fallback-border; // IE8 fallback
-  border: 1px solid $dropdown-border;
-  border-radius: $border-radius-base;
+  @include rem(border, 1px solid $dropdown-border);
+  @include rem(border-radius, $border-radius-base);
   @include box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
 
@@ -64,7 +62,7 @@
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: 3px 20px;
+    padding: em(3px) em(20px);
     clear: both;
     font-weight: normal;
     line-height: $line-height-base;
@@ -105,15 +103,16 @@
   &:focus {
     color: $dropdown-link-disabled-color;
   }
-
-  // Nuke hover/focus effects
+}
+// Nuke hover/focus effects
+.dropdown-menu > .disabled > a {
   &:hover,
   &:focus {
     text-decoration: none;
     background-color: transparent;
     background-image: none; // Remove CSS gradient
-    @include reset-filter;
-    cursor: $cursor-disabled;
+    @include reset-filter();
+    cursor: not-allowed;
   }
 }
 
@@ -152,8 +151,8 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: 3px 20px;
-  font-size: $font-size-small;
+  padding: em(3px) em(20px);
+  font-size: em($font-size-small);
   line-height: $line-height-base;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
@@ -185,15 +184,14 @@
   // Reverse the caret
   .caret {
     border-top: 0;
-    border-bottom: $caret-width-base dashed;
-    border-bottom: $caret-width-base solid \9; // IE8
+    @include rem(border-bottom, $caret-width-base solid);
     content: "";
   }
   // Different positioning for bottom up menu
   .dropdown-menu {
     top: auto;
     bottom: 100%;
-    margin-bottom: 2px;
+    margin-bottom: em(1px);
   }
 }
 
@@ -214,3 +212,4 @@
     }
   }
 }
+

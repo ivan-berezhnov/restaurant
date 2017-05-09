@@ -30,10 +30,10 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    @include translate(0, -25%);
+    @include translate3d(0, -25%, 0);
     @include transition-transform(0.3s ease-out);
   }
-  &.in .modal-dialog { @include translate(0, 0) }
+  &.in .modal-dialog { @include translate3d(0, 0, 0) }
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -44,7 +44,7 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
+  margin: em(10px);
 }
 
 // Actual modal
@@ -52,8 +52,8 @@
   position: relative;
   background-color: $modal-content-bg;
   border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-  border: 1px solid $modal-content-border-color;
-  border-radius: $border-radius-large;
+  @include rem(border, 1px solid $modal-content-border-color);
+  @include rem(border-radius, $border-radius-large);
   @include box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
@@ -77,13 +77,13 @@
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: $modal-title-padding;
-  border-bottom: 1px solid $modal-header-border-color;
-  @include clearfix;
+  padding: em($modal-title-padding);
+  @include rem(border-bottom, 1px solid $modal-header-border-color);
+  min-height: em($modal-title-padding + $modal-title-line-height);
 }
 // Close icon
 .modal-header .close {
-  margin-top: -2px;
+  margin-top: em(-2px);
 }
 
 // Title text within header
@@ -96,24 +96,24 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: $modal-inner-padding;
+  padding: em($modal-inner-padding);
 }
 
 // Footer (for actions)
 .modal-footer {
-  padding: $modal-inner-padding;
+  padding: em($modal-inner-padding);
   text-align: right; // right align buttons
-  border-top: 1px solid $modal-footer-border-color;
-  @include clearfix; // clear it in case folks use .pull-* classes on buttons
+  @include rem(border-top, 1px solid $modal-footer-border-color);
+  @include clearfix(); // clear it in case folks use .pull-* classes on buttons
 
   // Properly space out buttons
   .btn + .btn {
-    margin-left: 5px;
+    margin-left: em(5px);
     margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
   }
   // but override that for button groups
   .btn-group .btn + .btn {
-    margin-left: -1px;
+    margin-left: em(-1px);
   }
   // and override it for block buttons as well
   .btn-block + .btn-block {
@@ -124,9 +124,9 @@
 // Measure scrollbar width for padding body during modal show/hide
 .modal-scrollbar-measure {
   position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
+  top: em(-9999px);
+  width: em(50px);
+  height: em(50px);
   overflow: scroll;
 }
 
@@ -134,17 +134,17 @@
 @media (min-width: $screen-sm-min) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
-    width: $modal-md;
-    margin: 30px auto;
+    width: em($modal-md);
+    margin: em(30px) auto;
   }
   .modal-content {
     @include box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
 
   // Modal sizes
-  .modal-sm { width: $modal-sm; }
+  .modal-sm { width: em($modal-sm); }
 }
 
 @media (min-width: $screen-md-min) {
-  .modal-lg { width: $modal-lg; }
+  .modal-lg { width: em($modal-lg); }
 }

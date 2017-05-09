@@ -9,7 +9,7 @@
 
 .list-group {
   // No need to set list-style: none; since .list-group-item is block level
-  margin-bottom: 20px;
+  margin-bottom: em(20px);
   padding-left: 0; // reset padding because ul and ol
 }
 
@@ -21,11 +21,11 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: em(10px) em(15px);
   // Place the border on the list items and negative margin up for better styling
-  margin-bottom: -1px;
+  margin-bottom: em(-1px);
   background-color: $list-group-bg;
-  border: 1px solid $list-group-border;
+  @include rem(border, 1px solid $list-group-border);
 
   // Round the first and last items
   &:first-child {
@@ -35,16 +35,23 @@
     margin-bottom: 0;
     @include border-bottom-radius($list-group-border-radius);
   }
+
+  // Align badges within list items
+  > .badge {
+    float: right;
+  }
+  > .badge + .badge {
+    margin-right: em(5px);
+  }
 }
 
 
-// Interactive list items
+// Linked list items
 //
-// Use anchor or button elements instead of `li`s or `div`s to create interactive items.
+// Use anchor elements instead of `li`s or `div`s to create linked list items.
 // Includes an extra `.active` modifier class for showing selected items.
 
-a.list-group-item,
-button.list-group-item {
+a.list-group-item {
   color: $list-group-link-color;
 
   .list-group-item-heading {
@@ -60,11 +67,6 @@ button.list-group-item {
   }
 }
 
-button.list-group-item {
-  width: 100%;
-  text-align: left;
-}
-
 .list-group-item {
   // Disabled state
   &.disabled,
@@ -72,7 +74,6 @@ button.list-group-item {
   &.disabled:focus {
     background-color: $list-group-disabled-bg;
     color: $list-group-disabled-color;
-    cursor: $cursor-disabled;
 
     // Force color to inherit for custom content
     .list-group-item-heading {
@@ -122,7 +123,7 @@ button.list-group-item {
 
 .list-group-item-heading {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: em(5px);
 }
 .list-group-item-text {
   margin-bottom: 0;

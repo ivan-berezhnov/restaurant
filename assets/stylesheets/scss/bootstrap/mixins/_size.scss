@@ -1,8 +1,8 @@
 // Sizing shortcuts
 
 @mixin size($width, $height) {
-  width: $width;
-  height: $height;
+  width: em($width);
+  height: em($height);
 }
 
 @mixin square($size) {

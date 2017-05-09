@@ -6,17 +6,17 @@
 // Mixin and adjust the regular image class
 .thumbnail {
   display: block;
-  padding: $thumbnail-padding;
-  margin-bottom: $line-height-computed;
+  padding: em($thumbnail-padding);
+  margin-bottom: em($line-height-computed);
   line-height: $line-height-base;
   background-color: $thumbnail-bg;
-  border: 1px solid $thumbnail-border;
-  border-radius: $thumbnail-border-radius;
-  @include transition(border .2s ease-in-out);
+  @include rem(border, 1px solid $thumbnail-border);
+  @include rem(border-radius, $thumbnail-border-radius);
+  @include transition(all .2s ease-in-out);
 
   > img,
   a > img {
-    @include img-responsive;
+    @include img-responsive();
     margin-left: auto;
     margin-right: auto;
   }
@@ -25,7 +25,7 @@
 
   // Image captions
   .caption {
-    padding: $thumbnail-caption-padding;
+    padding: em($thumbnail-caption-padding);
     color: $thumbnail-caption-color;
   }
 }

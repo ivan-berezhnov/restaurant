@@ -10,11 +10,7 @@
   .radio,
   .checkbox,
   .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label  {
+  .checkbox-inline  {
     color: $text-color;
   }
   // Set the border and box shadow on specific inputs to match
@@ -69,16 +65,16 @@
 // [converter] $parent hack
 @mixin input-size($parent, $input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
   #{$parent} {
-    height: $input-height;
-    padding: $padding-vertical $padding-horizontal;
-    font-size: $font-size;
+    height: em($input-height);
+    padding: em($padding-vertical) em($padding-horizontal);
+    font-size: em($font-size);
     line-height: $line-height;
-    border-radius: $border-radius;
+    @include rem(border-radius, $border-radius);
   }
 
   select#{$parent} {
-    height: $input-height;
-    line-height: $input-height;
+    height: em($input-height);
+    line-height: em($input-height);
   }
 
   textarea#{$parent},

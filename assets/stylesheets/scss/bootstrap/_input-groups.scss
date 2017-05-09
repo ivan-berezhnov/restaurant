@@ -29,10 +29,6 @@
 
     width: 100%;
     margin-bottom: 0;
-
-    &:focus {
-      z-index: 3;
-    }
   }
 }
 
@@ -61,7 +57,7 @@
   display: table-cell;
 
   &:not(:first-child):not(:last-child) {
-    border-radius: 0;
+    @include rem(border-radius, 0);
   }
 }
 // Addon and addon wrapper for buttons
@@ -75,26 +71,26 @@
 // Text input groups
 // -------------------------
 .input-group-addon {
-  padding: $padding-base-vertical $padding-base-horizontal;
-  font-size: $font-size-base;
+  padding: em($padding-base-vertical) em($padding-base-horizontal);
+  font-size: em($font-size-base);
   font-weight: normal;
   line-height: 1;
   color: $input-color;
   text-align: center;
   background-color: $input-group-addon-bg;
-  border: 1px solid $input-group-addon-border-color;
-  border-radius: $input-border-radius;
+  @include rem(border, 1px solid $input-group-addon-border-color);
+  @include rem(border-radius, $border-radius-base);
 
   // Sizing
   &.input-sm {
-    padding: $padding-small-vertical $padding-small-horizontal;
-    font-size: $font-size-small;
-    border-radius: $input-border-radius-small;
+    padding: em($padding-small-vertical) em($padding-small-horizontal);
+    font-size: em($font-size-small);
+    @include rem(border-radius, $border-radius-small);
   }
   &.input-lg {
-    padding: $padding-large-vertical $padding-large-horizontal;
-    font-size: $font-size-large;
-    border-radius: $input-border-radius-large;
+    padding: em($padding-large-vertical) em($padding-large-horizontal);
+    font-size: em($font-size-large);
+    @include rem(border-radius, $border-radius-large);
   }
 
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -144,7 +140,7 @@
   > .btn {
     position: relative;
     + .btn {
-      margin-left: -1px;
+      margin-left: em(-1px);
     }
     // Bring the "active" button to the front
     &:hover,
@@ -158,14 +154,13 @@
   &:first-child {
     > .btn,
     > .btn-group {
-      margin-right: -1px;
+      margin-right: em(-1px);
     }
   }
   &:last-child {
     > .btn,
     > .btn-group {
-      z-index: 2;
-      margin-left: -1px;
+      margin-left: em(-1px);
     }
   }
 }

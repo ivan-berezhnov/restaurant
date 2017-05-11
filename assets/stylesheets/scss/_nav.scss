@@ -1,0 +1,89 @@
+//----------------------
+//    Responsive
+//----------------------
+@media(min-width:767px) {
+    .navbar {
+        padding: 0;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
+        background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 60%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 30%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+        &.navbar-default{ border: none; }
+        &.top-nav-collapse { padding: 0; background: #000; }
+
+        .navbar-brand{ padding: 0; }
+    }
+
+
+    .navbar-default .navbar-nav > li{
+      margin: 0 12.5px;
+
+      &:nth-child(7){
+        margin-right: 0;
+      }
+
+      &.social{
+          margin: 0px;
+
+          a{
+            padding-left: .71429em;
+            padding-right: .71429em;
+            color: #cc9900;
+
+            &:hover,
+            &:focus{
+              color: #cc9900;
+            }
+
+            &:hover{
+              background: transparent;
+              color: #cc9900;
+              border: none;
+              margin-top: 5px;
+              }
+          }
+      }
+
+      a{
+        font-family: 'gentium_book_basicbold';
+        font-size: 1em;
+        color: #fff;
+        text-transform: capitalize;
+        background-color: transparent;
+        padding-top: 30px;
+        margin-top: 5px;
+        outline: none;
+
+        &:hover{
+          background-color: #fff;
+          border-top: 5px solid #fff;
+          margin-top: 0;
+          color: #000;
+        }
+
+        &:focus{
+          color: #fff;
+        }
+      }
+
+      &.active{
+        background: transparent;
+
+        a{
+          background-color: transparent;
+          border-top: 5px solid #FFF;
+          margin-top: 0;
+          color: #fff;
+
+          &:hover{
+            background-color: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+}

@@ -1,0 +1,850 @@
+section{
+  padding-top: 150px;
+  text-align: center;
+  background: lighten($gray-light, 15%);
+  padding: 2.85714em 1.42857em;
+
+  &:nth-child(2n){
+    background: $gray-lighting;
+  }
+
+  &.home-section,
+  &.igredients-section,
+  &.reviews-section{
+    background-size: cover;
+  }
+
+  &.home-section{ background: url(../../images/bg-home-section.jpg); }
+  &.igredients-section{ background: url(../../images/bg-ingredient-section.jpg); }
+  &.reviews-section{ background: url(../../images/bg-reviews-section.jpg); }
+
+  &.about-section,
+  &.reservations-section{
+    background-image: url(../../images/motif-section.png);
+    background-size: auto;
+  }
+
+  &.menu-section{
+    background-image: url(../../images/motif-menu-section.png);
+    background-size: auto;
+  }
+}
+
+
+
+
+.home-section{
+  height: 100%;
+
+  .container .row .col-sm-12{
+    h1{
+      font-family: $font-family-title;
+      font-size: 4em;
+    }
+
+    .decoration{
+      margin: 2.14286em 0;
+    }
+
+    .link{
+      max-width: 250px;
+      margin: 0 auto;
+
+      .btn{
+        background: rgba($btn-default-color, .6);
+        border: 1px solid $btn-default-color;
+        color: $gray-whiter;
+        font-size: $font-size-large;
+        font-family: $font-family-content;
+        text-transform: uppercase;
+        padding: .71429em 2.14286em;
+        display: inline-block;
+        outline: none;
+
+        &.btn-default{
+          background: rgba($gray-whiter, .3);
+          border: 1px solid $gray-whiter;
+          color: $gray-whiter;
+          margin-left: 0;
+          margin-top: 1.07143em;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+.section{
+  h2{
+    font-family: $font-family-title;
+    font-size: $font-size-h1;
+  }
+
+  .decoration{
+    margin: 15px 0;
+    margin-bottom: 35px;
+  }
+
+  p{
+    font-family: $font-family-content;
+    font-size: 14px;
+    text-align: center;
+    width: 85%;
+    max-width: 430px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+
+
+.about-section .container .row .col-xs-12{
+  p{
+    color: $gray-black;
+  }
+
+  &:first-child > img{
+    margin: 0 auto;
+    padding-left: 70px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  &:last-child{ display: none; }
+}
+
+
+
+
+.igredients-section .container .row{
+  .col-xs-12{
+    background: rgba($gray-black, .7);
+    padding: 2.75em;
+    padding-top: 3em;
+    max-width: 500px;
+    margin: 0 auto;
+
+    &.pull-right{ float: none !important; }
+
+    p{
+      margin-bottom: 2.25em;
+      width: 100%;
+    }
+
+    .col-xs-4{
+      img{
+        margin: 0 auto;
+        border: .25em solid rgba($gray-whiter, .1);
+        border-radius: 100%;
+        width: 90%;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+
+.reservations-section .container .row{
+  > .col-xs-12:first-child{ display: none; }
+  > .col-xs-12:last-child{
+    form{
+      max-width: 430px;
+      margin: 0 auto;
+
+      *{ outline: none; }
+
+      .form-group{
+        text-align: left;
+        width: calc(50% - (1.42857em /2));
+        margin-bottom: 2.14286em;
+
+        &:nth-child(2n){
+          margin-left: 1.42857em;
+        }
+      }
+
+      label{
+        font-family: $font-family-bold;
+        font-size: 1em;
+      }
+
+      input, select{
+        border-color: $gray-light;
+        border-radius: 0;
+
+        &:focus{
+          border-color: $brand-primary;
+        }
+      }
+
+      button{
+        padding: .75em 3em;
+        font-family: $font-family-basic;
+        font-size: 1em;
+        outline: none;
+      }
+    }
+  }
+}
+
+
+
+.menu-section .container .row .col-sm-6{
+  padding: 0 1.42857em;
+
+ .row{
+  max-width: 430px;
+  margin: 0 auto;
+  margin-bottom: 5em;
+
+    + .row{
+      margin-top: 5em;
+    }
+
+    .offre{
+      margin-top: 1.42857em;
+
+      &:first-child{ margin-top: 0;}
+      &.special{ margin-top: 0;}
+    }
+
+    .block-special{
+      text-align: right;
+
+      > span{
+        font-size: 1em;
+        display: inline-block;
+        background: $brand-primary;
+        padding: .42857em 1.07143em;
+        color: $gray-whiter;
+      }
+    }
+
+    .menu-content{
+      margin: 0 auto;
+      padding: 10px;
+
+      &.special{
+        border: 1px solid $brand-primary;
+      }
+    }
+
+    h2{
+      text-transform: capitalize;
+    }
+
+    h3{
+      font-size: 1.42857em;
+      display: block;
+      font-family: $font-family-title;
+      text-transform: capitalize;
+      text-align: left;
+      margin-bottom: .75em;
+
+      &:after{
+        content: "";
+        background: $brand-primary;
+        height: 1px;
+        display: block;
+        margin-top: .5em;
+      }
+    }
+
+    p{
+      text-align: left;
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+
+
+.reviews-section{
+  .container .row .col-xs-12{
+    background: rgba($gray-black, .7);
+    float: none;
+    margin: 0 auto;
+    padding-top: 2.75em;
+    padding-bottom: 6.25em;
+    max-width: 500px;
+
+    h2{
+      text-transform: capitalize;
+      padding: 0 1.25em;
+    }
+
+    .decoration{ padding: 0 2.25em; }
+
+    .content{
+      position: relative;
+      max-width: 430px;
+      margin: 0 auto;
+
+      .icon-quotes-right{
+        position: absolute;
+        text-align: left;
+        display: block;
+        top: -10px;;
+        left: 10px;
+        transform: rotate(180deg);
+        font-size: 24px;
+        color: #999b99;
+      }
+
+      p{
+        font-family: $font-family-citation;
+        font-size: 1.14285em;
+        line-height: 1.2;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 440px;
+        padding-left: 1.5em;
+      }
+
+      .source{
+        display: inline-block;
+        font-family: $font-family-content;
+        font-size: .85714em;
+        margin-top: 1.07143em;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+//----------------------
+//    Responsive
+//----------------------
+@media(min-width:500px) {
+  .home-section .container .row .col-sm-12{
+    .link{
+      max-width: none;
+
+      .btn.btn-default{ margin-top: 0; margin-left: 1.5em; }
+    }
+  }
+}
+
+
+@media(min-width:768px) {
+  .section{
+    h2{
+      font-size: 1.875em;
+    }
+
+    .decoration{
+      margin: 15px 0;
+      margin-bottom: 1.75em;
+
+      img{
+        width: 100%;
+        max-width: 247px;
+      }
+    }
+
+    p{
+      font-size: .875em;
+      max-width: 430px;
+      margin-bottom: 2.5em;
+    }
+  }
+
+
+  .home-section .container .row .col-sm-12{
+    h1{ font-size: 4.5em; }
+    .decoration{ margin: 1.5em 0; }
+
+    .link{
+      max-width: none;
+
+      .btn{
+        font-size: 1em;
+        padding: .625em 2.14286em;
+
+        &.btn-default{ margin-top: 0; margin-left: 1.5em; }
+      }
+    }
+  }
+
+
+  .about-section .container .row .col-sm-6{
+    &:first-child > img{
+      padding-left: 3.88889em;  //70px
+      max-width: 280px;
+    }
+
+    &:last-child{
+      display: block;
+
+      img{
+        max-width: 570px;
+        width: 100%;
+      }
+    }
+  }
+
+  .reservations-section .container .row{
+    > .col-sm-6:first-child{ display: block; }
+    > .col-sm-6{
+      &:first-child img{
+        max-width: calc( 50% - 1.25em);
+        float: left;
+
+        &:first-child{ margin-right: 1.25em; }
+      }
+
+      &:last-child{
+        form{
+          max-width: 430px;
+          margin: 0 auto;
+
+          .form-group{
+            text-align: left;
+            width: calc(50% - (1.5em /2));
+            margin-bottom: 1.25em;
+
+            &:nth-child(2n){ margin-left: 1.5em; }
+          }
+
+          label{ font-size: .875em; }
+          input, select{ font-size: .875em; }
+
+          button{
+            padding: .6em 3em;
+            font-size: .875em;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .igredients-section .container .row{
+    .col-sm-6{
+      padding: 2.75em;
+      padding-top: 3em;
+      max-width: none;
+      margin: 0;
+
+      &.pull-right{ float: right !important; }
+
+      p{ margin-bottom: 2.25em; }
+
+      .col-sm-4{
+        img{
+          border: .25em solid rgba($gray-whiter, .1);
+        }
+      }
+    }
+  }
+
+
+  .reviews-section{
+    .container .row .col-sm-6{
+      padding-top: 2.75em;
+      padding-bottom: 6.25em;
+      max-width: none;
+
+      .content{
+        position: relative;
+
+        .icon-quotes-right{
+          position: absolute;
+          text-align: left;
+          display: block;
+          top: -10px;;
+          left: 10px;
+          transform: rotate(180deg);
+          font-size: 24px;
+          color: #999b99;
+        }
+
+        p{
+          font-size: .9em;
+        }
+
+        .source{
+          font-size: .7em;
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+
+
+  .menu-section .container .row .col-sm-6{
+    padding: 0 20px;
+
+    .row{
+      margin-bottom: 3.5em;
+      max-width: 430px;
+
+      + .row{
+        margin-top: 3.5em;
+      }
+
+      .offre{ margin-top: 1em; }
+
+      .block-special > span{
+        font-size: .7em;
+        padding: .3em 1em; }
+
+      .menu-content{ padding: 10px; }
+
+      h3{
+        font-size: 1.05em;
+        margin-bottom: .75em;
+
+        &:after{ margin-top: .5em; }
+      }
+    }
+  }
+}
+
+
+
+@media(min-width:992px) {
+  .section{
+    h2{ font-size: 1.8em;  }
+    p{ font-size: .8em; }
+    .decoration img{
+        width: 50%;
+    }
+  }
+
+  .home-section .container .row .col-sm-12{
+    .link .btn{
+      font-size: .9em;
+      padding: .65em 1.75em;
+    }
+  }
+
+  .reservations-section .container .row .col-sm-6{
+    &:first-child img{
+      max-width: calc( 50% - 1.5em);
+
+      &:first-child{ margin-right: 1.5em; }
+    }
+
+    &:last-child{
+      form{
+        .form-group{ margin-bottom: 1.5em; }
+        label{ font-size: .8em; }
+        input, select{ font-size: .8em; }
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+//
+// section{
+//     padding-top: 150px;
+//     text-align: center;
+//     background: #eee;
+//
+//     &:nth-child(2n){
+//       background: #fcfcfc;
+//     }
+//
+//     &.home-section{
+//       background: url(../../images/bg-home-section.jpg);
+//       background-size: cover;
+//     }
+//
+//     &.igredients-section{
+//       background: url(../../images/bg-ingredient-section.jpg);
+//       background-size: cover;
+//     }
+//
+//     &.reviews-section{
+//       background: url(../../images/bg-reviews-section.jpg);
+//       background-size: cover;
+//     }
+//
+//     &.about-section,
+//     &.reservations-section{
+//       background-color: $gray-lighter;
+//       background-image: url(../../images/motif-section.png);
+//       background-size: 115px 100px;
+//     }
+//
+//     &.menu-section{
+//       background-color: $gray-lighter;
+//       background-image: url(../../images/motif-menu-section.png);
+//       background-size: 124px 71px;
+//     }
+// }
+//
+//
+//
+//
+//
+// .home-section{
+//   height: 100%;
+//
+//   .container .row .col-lg-12{
+//     h1{
+//       font-family: $font-family-title;
+//       font-size: 4.28em;
+//     }
+//
+//     .decoration{
+//       margin: 30px 0;
+//     }
+//
+//     .btn{
+//       background: rgba($btn-default-color, .6);
+//       border: 1px solid $btn-default-color;
+//       color: $gray-whiter;
+//       font-size: $font-size-large;
+//       font-family: $font-family-content;
+//       text-transform: uppercase;
+//       padding: 15px 25px;
+//
+//       &.btn-default{
+//         background: rgba($gray-whiter, .3);
+//         border: 1px solid $gray-whiter;
+//         color: $gray-whiter;
+//         margin-left: 30px;
+//       }
+//     }
+//   }
+// }
+//
+//
+//
+//
+//
+//
+//
+// .section{
+//   h2{
+//     font-family: $font-family-title;
+//     font-size: $font-size-h1;
+//   }
+//
+//   .decoration{
+//     margin: 15px 0;
+//     margin-bottom: 35px;
+//   }
+//
+//   p{
+//     font-family: $font-family-content;
+//     font-size: 14px;
+//     text-align: center;
+//     max-width: 430px;
+//     margin: 0 auto;
+//     margin-bottom: 50px;
+//   }
+// }
+//
+//
+// .about-section .container .row .col-md-6{
+//   p{
+//     color: $gray-black;
+//   }
+//
+//   > img{
+//     margin: 0 auto;
+//     padding-left: 70px;
+//   }
+//
+//   &:last-child img{
+//     max-width: 570px;
+//     width: 100%;
+//   }
+// }
+//
+//
+// .igredients-section .container .row{
+//   .col-md-6{
+//     background: rgba($gray-black, .7);
+//     padding: 80px;
+//     padding-top: 85px;
+//
+//     p{
+//       margin-bottom: 70px;
+//     }
+//
+//     .col-md-4{
+//       img{
+//         margin: 0 auto;
+//       }
+//     }
+//   }
+// }
+//
+//
+// .reservations-section .container .row{
+//   .col-md-6:last-child{
+//     form{
+//       max-width: 430px;
+//       margin: 0 auto;
+//
+//       *{
+//         outline: none;
+//       }
+//
+//       .form-group{
+//         text-align: left;
+//         width: calc(50% - (30px /2));
+//         margin-bottom: 30px;
+//
+//         &:nth-child(2n){
+//           margin-left: 30px;
+//         }
+//       }
+//
+//       label{
+//         font-family: $font-family-bold;
+//         font-size: $font-size-base;
+//       }
+//
+//       input, select{
+//         border-color: $gray-light;
+//         &:focus{
+//           border-color: $brand-primary;
+//         }
+//       }
+//
+//       button{
+//         padding: 15px 60px;
+//         font-family: $font-family-basic;
+//       }
+//     }
+//
+//   }
+// }
+//
+//
+//
+// .menu-section .container .row .col-md-6 .row{
+//   margin-bottom: 70px;
+//   max-width: 430px;
+//   margin: 0 auto;
+//
+//   + .row{
+//     margin-top: 70px;
+//   }
+//
+//   .offre{
+//     margin-top: 30px;
+//
+//     &:first-child{ margin-top: 0;}
+//     &.special{ margin-top: 10px;}
+//   }
+//
+//   .block-special{
+//     text-align: right;
+//
+//     > span{
+//       display: inline-block;
+//       background: $brand-primary;
+//       padding: 10px 15px;
+//       color: $gray-whiter;
+//     }
+//   }
+//
+//   .menu-content{
+//     margin: 0 auto;
+//     padding: 10px;
+//
+//     &.special{
+//       border: 1px solid $brand-primary;
+//     }
+//   }
+//
+//   h2{
+//     text-transform: capitalize;
+//   }
+//
+//   h3{
+//     display: block;
+//     font-family: $font-family-title;
+//     text-transform: capitalize;
+//     text-align: left;
+//     margin-bottom: 15px;
+//
+//     &:after{
+//       content: "";
+//       background: $brand-primary;
+//       height: 1px;
+//       display: block;
+//       margin-top: 15px;
+//     }
+//   }
+//
+//   p{
+//     text-align: left;
+//     margin-bottom: 0;
+//   }
+// }
+//
+//
+//
+// .reviews-section{
+//   .container .row .col-md-6{
+//     background: rgba($gray-black, .7);
+//     float: none;
+//     margin: 0 auto;
+//     padding: 80px 70px;
+//     padding-bottom: 180px;
+//
+//     h2{
+//       font-family: $font-family-title;
+//       font-size: $font-size-h1;
+//       text-transform: capitalize;
+//     }
+//
+//     p{
+//       font-family: $font-family-citation;
+//       font-size: $font-size-large;
+//       line-height: 1.2;
+//       width: 80%;
+//       margin: 0 auto;
+//     }
+//   }
+// }
+//
+//
+//
+// .reservations-section{
+//   .container .row .col-md-6{
+//     img.demi{
+//       width: calc(50% - 50px);
+//       float: left;
+//
+//       &:first-child{
+//         margin-right: 50px;
+//       }
+//     }
+//   }
+// }

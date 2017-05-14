@@ -5,12 +5,12 @@
 
 // Base class
 .well {
-  min-height: em(20px);
-  padding: em(19px);
-  margin-bottom: em(20px);
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
   background-color: $well-bg;
-  @include rem(border, 1px solid $well-border);
-  @include rem(border-radius, $border-radius-base);
+  border: 1px solid $well-border;
+  border-radius: $border-radius-base;
   @include box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
   blockquote {
     border-color: #ddd;
@@ -20,10 +20,10 @@
 
 // Sizes
 .well-lg {
-  padding: em(24px);
-  @include rem(border-radius, $border-radius-large);
+  padding: 24px;
+  border-radius: $border-radius-large;
 }
 .well-sm {
-  padding: em(9px);
-  @include rem(border-radius, $border-radius-small);
+  padding: 9px;
+  border-radius: $border-radius-small;
 }

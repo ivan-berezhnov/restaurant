@@ -24,7 +24,7 @@
   // Quick fix for labels in buttons
   .btn & {
     position: relative;
-    top: em(-1px);
+    top: -1px;
   }
 }
 

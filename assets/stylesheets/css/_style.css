@@ -204,26 +204,40 @@ html {
 section {
   text-align: center;
   background: #eeeeee;
-  padding: 50px 1.42857em; }
+  padding: 50px 1.42857em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   section:nth-child(2n) {
     background: #fcfcfc; }
   section.home-section, section.ingredients-section, section.reviews-section, section.about-section, section.menu-section, section.reservations-section {
     min-height: 100%; }
   section.home-section {
-    background-image: url(../../images/bg-home-section.jpg);
-    background-size: cover; }
+    background: url(../../images/bg-home-section.jpg);
+    background-size: cover;
+    background-position: center; }
   section.ingredients-section {
     background-image: url(../../images/bg-ingredient-section.jpg);
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
   section.reviews-section {
     background-image: url(../../images/bg-reviews-section.jpg);
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
   section.about-section, section.reservations-section {
     background-image: url(../../images/motif-section.png);
-    background-size: auto; }
+    background-size: auto;
+    background-position: center; }
   section.menu-section {
     background-image: url(../../images/motif-menu-section.png);
-    background-size: auto; }
+    background-size: auto;
+    background-position: center; }
 
 .navbar-inverse ~ section {
   padding-top: 50px; }
@@ -452,6 +466,11 @@ section {
       font-size: .85714em;
       margin-top: 1.07143em; }
 
+@media (max-width: 480px) {
+  .ingredients-section .container .row .col-xs-12 .decoration img,
+  .reviews-section .container .row .col-xs-12 .decoration img {
+    max-width: 200px; } }
+
 @media (min-width: 500px) {
   .home-section .container .row .col-sm-12 .link {
     max-width: none; }
@@ -478,23 +497,18 @@ section {
   .home-section {
     padding-top: 0;
     padding-bottom: 0; }
-    .home-section .container .row {
-      margin-top: 50vh;
-      -webkit-transform: translateY(-45%);
-      -ms-transform: translateY(-45%);
-      transform: translateY(-45%); }
-      .home-section .container .row .col-sm-12 h1 {
-        font-size: 4.5em; }
-      .home-section .container .row .col-sm-12 .decoration {
-        margin: 1.5em 0; }
-      .home-section .container .row .col-sm-12 .link {
-        max-width: none; }
-        .home-section .container .row .col-sm-12 .link .btn {
-          font-size: 1em;
-          padding: .625em 2.14286em; }
-          .home-section .container .row .col-sm-12 .link .btn.btn-default {
-            margin-top: 0;
-            margin-left: 1.5em; }
+    .home-section .container .row .col-sm-12 h1 {
+      font-size: 4.5em; }
+    .home-section .container .row .col-sm-12 .decoration {
+      margin: 1.5em 0; }
+    .home-section .container .row .col-sm-12 .link {
+      max-width: none; }
+      .home-section .container .row .col-sm-12 .link .btn {
+        font-size: 1em;
+        padding: .625em 2.14286em; }
+        .home-section .container .row .col-sm-12 .link .btn.btn-default {
+          margin-top: 0;
+          margin-left: 1.5em; }
   .about-section .container .row .col-sm-6:first-child > img {
     padding-left: 3.88889em;
     max-width: 280px; }
@@ -592,14 +606,9 @@ section {
     font-size: .8em; }
   .section .decoration img {
     width: 50%; }
-  .home-section .container .row {
-    margin-top: 50vh;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-    .home-section .container .row .col-sm-12 .link .btn {
-      font-size: .9em;
-      padding: .65em 1.75em; }
+  .home-section .container .row .col-sm-12 .link .btn {
+    font-size: .9em;
+    padding: .65em 1.75em; }
   .reservations-section .container .row .col-sm-6:first-child img {
     max-width: calc( 50% - 1.5em); }
     .reservations-section .container .row .col-sm-6:first-child img:first-child {
@@ -646,16 +655,16 @@ footer .container .row .col-md-4 {
       font-family: "open_sansbold";
       font-weight: bold; }
 
-footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .payment {
+footer .container .row .col-md-4 .social, .payment {
   margin: 0 auto;
   margin-top: 1.07143em;
   text-align: center; }
-  footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, footer .container .row .col-md-4 .payment a, footer .container .row .col-md-4 .payment p {
+  footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, .payment a, .payment p {
     color: white;
     font-size: 1.14285em;
     margin: 0 .25em;
     display: inline-block; }
-  footer .container .row .col-md-4 .social a:hover, footer .container .row .col-md-4 .payment a:hover {
+  footer .container .row .col-md-4 .social a:hover, .payment a:hover {
     color: #cc9900; }
 
 @media (min-width: 768px) {
@@ -663,21 +672,21 @@ footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .paym
     padding: 3em 0; }
   footer .container .row .col-md-4 {
     margin-bottom: 0; }
-  footer .container .row .col-md-4 h2 {
-    font-size: 1.11111em;
-    max-width: 370px; }
-  footer .container .row .col-md-4 .decoration {
-    margin: 1.11111em auto;
-    max-width: 370px; }
-    footer .container .row .col-md-4 .decoration img {
-      max-width: 11.11111em;
-      /*200px*/ }
-  footer .container .row .col-md-4 p {
-    font-size: .8em;
-    max-width: 370px; }
-  footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .payment {
-    max-width: 370px;
-    margin-top: 1.66667em; }
-    footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, footer .container .row .col-md-4 .payment a, footer .container .row .col-md-4 .payment p {
-      font-size: 1em;
-      margin: 0 .19444em; } }
+    footer .container .row .col-md-4 h2 {
+      font-size: 1.11111em;
+      max-width: 370px; }
+    footer .container .row .col-md-4 .decoration {
+      margin: 1.11111em auto;
+      max-width: 370px; }
+      footer .container .row .col-md-4 .decoration img {
+        max-width: 11.11111em;
+        /*200px*/ }
+    footer .container .row .col-md-4 p {
+      font-size: .8em;
+      max-width: 370px; }
+    footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .payment {
+      max-width: 370px;
+      margin-top: 1.66667em; }
+      footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, footer .container .row .col-md-4 .payment a, footer .container .row .col-md-4 .payment p {
+        font-size: 1em;
+        margin: 0 .19444em; } }

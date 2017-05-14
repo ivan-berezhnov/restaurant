@@ -179,11 +179,9 @@
   //----------------------
   // -- Navbar section
   //----------------------
-  .top-nav-collapse{
-    .side-collapse .navbar-collapse .navbar-nav{
-      > li a{ padding-top: 1.5em; }
-      .rs{ padding-top: calc(1.4em); }
-    }
+  .top-nav-collapse .side-collapse .navbar-collapse .navbar-nav{
+    > li a{ padding-top: 1.5em; }
+    .rs{ padding-top: calc(1.4em); }
   }
 
 

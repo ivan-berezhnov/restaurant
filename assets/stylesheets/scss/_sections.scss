@@ -5,14 +5,11 @@ section{
   text-align: center;
   background: lighten($gray-light, 15%);
   padding: 50px 1.42857em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &:nth-child(2n){ background: $gray-lighting; }
-
-  .home-section,
-  .ingredients-section,
-  .reviews-section{
-    // height: calc(100% - 50px);
-  }
 
   &.home-section,
   &.ingredients-section,
@@ -21,22 +18,23 @@ section{
   &.menu-section,
   &.reservations-section{
     min-height: 100%;
-
   }
 
-  &.home-section{ background-image: url(../../images/bg-home-section.jpg); background-size: cover; }
-  &.ingredients-section{ background-image: url(../../images/bg-ingredient-section.jpg); background-size: cover;}
-  &.reviews-section{ background-image: url(../../images/bg-reviews-section.jpg); background-size: cover;}
+  &.home-section{ background: url(../../images/bg-home-section.jpg); background-size: cover; background-position: center; }
+  &.ingredients-section{ background-image: url(../../images/bg-ingredient-section.jpg); background-size: cover; background-position: center; }
+  &.reviews-section{ background-image: url(../../images/bg-reviews-section.jpg); background-size: cover; background-position: center; }
 
   &.about-section,
   &.reservations-section{
     background-image: url(../../images/motif-section.png);
     background-size: auto;
+    background-position: center;
   }
 
   &.menu-section{
     background-image: url(../../images/motif-menu-section.png);
     background-size: auto;
+    background-position: center;
   }
 }
 
@@ -48,7 +46,6 @@ section{
       margin-top: 25px;
     }
 }
-
 
 
 
@@ -83,51 +80,47 @@ section{
 //------------------------
 //-- Home section
 //------------------------
-.home-section{
-  // height: 100%;
+.home-section .container .row .col-xs-12{
+  h1{
+    font-family: $font-family-title;
+    font-size: 4em;
+  }
 
-  .container .row .col-xs-12{
-    h1{
-      font-family: $font-family-title;
-      font-size: 4em;
-    }
+  .decoration{
+    margin: 2.14286em 0;
+  }
 
-    .decoration{
-      margin: 2.14286em 0;
-    }
+  .link{
+    max-width: 250px;
+    margin: 0 auto;
 
-    .link{
-      max-width: 250px;
-      margin: 0 auto;
+    .btn{
+      background: rgba($btn-default-color, .6);
+      border: 1px solid $btn-default-color;
+      color: $gray-whiter;
+      font-size: $font-size-large;
+      font-family: $font-family-content;
+      text-transform: uppercase;
+      padding: .71429em 2.14286em;
+      display: inline-block;
+      outline: none;
 
-      .btn{
-        background: rgba($btn-default-color, .6);
-        border: 1px solid $btn-default-color;
+      &:hover{
+        background: rgba($btn-default-color, .8);
+        transition: background .3s;
+      }
+
+      &.btn-default{
+        background: rgba($gray-whiter, .2);
+        border: 1px solid $gray-whiter;
         color: $gray-whiter;
-        font-size: $font-size-large;
-        font-family: $font-family-content;
-        text-transform: uppercase;
-        padding: .71429em 2.14286em;
-        display: inline-block;
-        outline: none;
+        margin-left: 0;
+        margin-top: 1.07143em;
 
         &:hover{
-          background: rgba($btn-default-color, .8);
+          background: rgba($gray-whiter, .7);
           transition: background .3s;
-        }
-
-        &.btn-default{
-          background: rgba($gray-whiter, .2);
-          border: 1px solid $gray-whiter;
-          color: $gray-whiter;
-          margin-left: 0;
-          margin-top: 1.07143em;
-
-          &:hover{
-            background: rgba($gray-whiter, .7);
-            transition: background .3s;
-            color: $gray-black;
-          }
+          color: $gray-black;
         }
       }
     }
@@ -161,38 +154,34 @@ section{
 //------------------------
 //-- Ingredients section
 //------------------------
-.ingredients-section .container .row{
-  .col-xs-12{
-    background: rgba($gray-black, .7);
+.ingredients-section .container .row .col-xs-12{
+  background: rgba($gray-black, .7);
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,.7) 100%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%,rgba(0,0,0,.7) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%,rgba(0,0,0,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,.7) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%,rgba(0,0,0,.7) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%,rgba(0,0,0,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-    padding: 2.75em;
-    padding-top: 3em;
-    max-width: 500px;
+  padding: 2.75em;
+  padding-top: 3em;
+  max-width: 500px;
+  margin: 0 auto;
+  display: inline-block;
+
+  &.pull-right{ float: none !important; }
+
+  p{
+    margin-bottom: 2.25em;
+    width: 100%;
+  }
+
+  .col-xs-4 img{
     margin: 0 auto;
-    display: inline-block;
-
-    &.pull-right{ float: none !important; }
-
-    p{
-      margin-bottom: 2.25em;
-      width: 100%;
-    }
-
-    .col-xs-4{
-      img{
-        margin: 0 auto;
-        border: .25em solid rgba($gray-whiter, .1);
-        border-radius: 100%;
-        width: 90%;
-        max-width: 100px;
-      }
-    }
+    border: .25em solid rgba($gray-whiter, .1);
+    border-radius: 100%;
+    width: 90%;
+    max-width: 100px;
   }
 }
 
@@ -319,12 +308,10 @@ section{
     }
   }
 
-  &:last-child{
-    .row:last-child{
+  &:last-child .row:last-child{
       margin-bottom: 0;
 
       .offre:last-child .menu-content{ padding-bottom: 0; }
-    }
   }
 }
 
@@ -334,61 +321,59 @@ section{
 //------------------------
 //-- Reviews section
 //------------------------
-.reviews-section{
-  .container .row .col-xs-12{
-    background: rgba($gray-black, .7);
+.reviews-section .container .row .col-xs-12{
+  background: rgba($gray-black, .7);
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.8) 100%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.6) 0%,rgba(0,0,0,.8) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%,rgba(0,0,0,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.8) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.6) 0%,rgba(0,0,0,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%,rgba(0,0,0,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-    float: none;
+  float: none;
+  margin: 0 auto;
+  padding-top: 2.75em;
+  padding-bottom: 6.25em;
+  max-width: 500px;
+
+  h2{
+    text-transform: capitalize;
+    padding: 0 1.25em;
+  }
+
+  .decoration{ padding: 0 2.25em; }
+
+  .content{
+    position: relative;
+    max-width: 430px;
     margin: 0 auto;
-    padding-top: 2.75em;
-    padding-bottom: 6.25em;
-    max-width: 500px;
 
-    h2{
-      text-transform: capitalize;
-      padding: 0 1.25em;
+    .icon-quotes-right{
+      position: absolute;
+      text-align: left;
+      display: block;
+      top: -10px;;
+      left: 10px;
+      transform: rotate(180deg);
+      font-size: 24px;
+      color: #999b99;
     }
 
-    .decoration{ padding: 0 2.25em; }
-
-    .content{
-      position: relative;
-      max-width: 430px;
+    p{
+      font-family: $font-family-citation;
+      font-size: 1.14285em;
+      line-height: 1.2;
+      width: 90%;
       margin: 0 auto;
+      max-width: 440px;
+      padding-left: 1.5em;
+    }
 
-      .icon-quotes-right{
-        position: absolute;
-        text-align: left;
-        display: block;
-        top: -10px;;
-        left: 10px;
-        transform: rotate(180deg);
-        font-size: 24px;
-        color: #999b99;
-      }
-
-      p{
-        font-family: $font-family-citation;
-        font-size: 1.14285em;
-        line-height: 1.2;
-        width: 90%;
-        margin: 0 auto;
-        max-width: 440px;
-        padding-left: 1.5em;
-      }
-
-      .source{
-        display: inline-block;
-        font-family: $font-family-content;
-        font-size: .85714em;
-        margin-top: 1.07143em;
-      }
+    .source{
+      display: inline-block;
+      font-family: $font-family-content;
+      font-size: .85714em;
+      margin-top: 1.07143em;
     }
   }
 }
@@ -399,19 +384,20 @@ section{
 //----------------------
 //    Responsive
 //----------------------
-@media(min-width:500px) {
-  .home-section{
-
-
-    .container .row{
-      .col-sm-12{
-        .link{
-          max-width: none;
-
-          .btn.btn-default{ margin-top: 0; margin-left: 1.5em; }
-        }
-      }
+@media(max-width:480px) {
+  .ingredients-section,
+  .reviews-section{
+    .container .row .col-xs-12 .decoration img{
+      max-width: 200px;
     }
+  }
+}
+
+@media(min-width:500px) {
+  .home-section .container .row .col-sm-12 .link{
+    max-width: none;
+
+    .btn.btn-default{ margin-top: 0; margin-left: 1.5em; }
   }
 }
 
@@ -455,23 +441,18 @@ section{
     padding-top: 0;
     padding-bottom: 0;
 
-    .container .row{
-      margin-top: 50vh;
-      transform: translateY(-45%);
+    .container .row .col-sm-12{
+      h1{ font-size: 4.5em; }
+      .decoration{ margin: 1.5em 0; }
 
-      .col-sm-12{
-        h1{ font-size: 4.5em; }
-        .decoration{ margin: 1.5em 0; }
+      .link{
+        max-width: none;
 
-        .link{
-          max-width: none;
+        .btn{
+          font-size: 1em;
+          padding: .625em 2.14286em;
 
-          .btn{
-            font-size: 1em;
-            padding: .625em 2.14286em;
-
-            &.btn-default{ margin-top: 0; margin-left: 1.5em; }
-          }
+          &.btn-default{ margin-top: 0; margin-left: 1.5em; }
         }
       }
     }
@@ -553,11 +534,7 @@ section{
 
       p{ margin-bottom: 2.25em; }
 
-      .col-sm-4{
-        img{
-          border: .25em solid rgba($gray-whiter, .1);
-        }
-      }
+      .col-sm-4 img{ border: .25em solid rgba($gray-whiter, .1); }
     }
   }
 
@@ -565,34 +542,32 @@ section{
   //-------------------
 
 
-  .reviews-section{
-    .container .row .col-sm-6{
-      padding-top: 2.75em;
-      padding-bottom: 6.25em;
-      max-width: none;
+  .reviews-section .container .row .col-sm-6{
+    padding-top: 2.75em;
+    padding-bottom: 6.25em;
+    max-width: none;
 
-      .content{
-        position: relative;
+    .content{
+      position: relative;
 
-        .icon-quotes-right{
-          position: absolute;
-          text-align: left;
-          display: block;
-          top: -10px;;
-          left: 10px;
-          transform: rotate(180deg);
-          font-size: 24px;
-          color: #999b99;
-        }
+      .icon-quotes-right{
+        position: absolute;
+        text-align: left;
+        display: block;
+        top: -10px;;
+        left: 10px;
+        transform: rotate(180deg);
+        font-size: 24px;
+        color: #999b99;
+      }
 
-        p{
-          font-size: .9em;
-        }
+      p{
+        font-size: .9em;
+      }
 
-        .source{
-          font-size: .7em;
-          margin-top: 1em;
-        }
+      .source{
+        font-size: .7em;
+        margin-top: 1em;
       }
     }
   }
@@ -636,31 +611,18 @@ section{
   .navbar-inverse ~ section{
       padding-top: 3.35em;
 
-      .container{
-        margin-top: 1.25em;
-      }
+      .container{ margin-top: 1.25em; }
   }
 
   .section{
     h2{ font-size: 1.8em;  }
     p{ font-size: .8em; }
-    .decoration img{
-        width: 50%;
-    }
+    .decoration img{ width: 50%; }
   }
 
-  .home-section{
-    .container .row{
-      margin-top: 50vh;
-      transform: translateY(-50%);
-
-      .col-sm-12{
-        .link .btn{
-          font-size: .9em;
-          padding: .65em 1.75em;
-        }
-      }
-    }
+  .home-section .container .row .col-sm-12 .link .btn{
+    font-size: .9em;
+    padding: .65em 1.75em;
   }
 
   .reservations-section .container .row .col-sm-6{

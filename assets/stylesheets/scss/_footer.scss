@@ -65,21 +65,19 @@ footer .container .row .col-md-4{
 //------------------------
 //-- Social media Footer
 //------------------------
-footer .container .row .col-md-4{
-  .social, .payment{
-    margin: 0 auto;
-    margin-top: 1.07143em;  //15px
-    text-align: center;
+footer .container .row .col-md-4 .social, .payment{
+  margin: 0 auto;
+  margin-top: 1.07143em;  //15px
+  text-align: center;
 
-    a, p{
-      color: $gray-whiter;
-      font-size: 1.14285em; //16px
-      margin: 0 .25em;  //0 3.5em
-      display: inline-block;
-    }
-
-    a:hover{ color: $brand-primary; }
+  a, p{
+    color: $gray-whiter;
+    font-size: 1.14285em; //16px
+    margin: 0 .25em;  //0 3.5em
+    display: inline-block;
   }
+
+  a:hover{ color: $brand-primary; }
 }
 
 
@@ -90,9 +88,9 @@ footer .container .row .col-md-4{
 //----------------------
 @media(min-width:768px) {
   footer{ padding: 3em 0; }
-  footer .container .row .col-md-4{ margin-bottom: 0; }
-
   footer .container .row .col-md-4{
+    margin-bottom: 0;
+
     h2{ font-size: 1.11111em; max-width: $footer-col-max-width; }
 
     .decoration{

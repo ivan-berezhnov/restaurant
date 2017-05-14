@@ -1,12 +1,20 @@
 $footer-col-max-width: 370px; //370px
 
+//------------------------
+//-- Container Footer
+//------------------------
 footer{
   background: $gray-dark;
   padding: 3em 0;  //42px
 }
 
+
+
+//------------------------
+//-- Content Footer
+//------------------------
 footer .container .row .col-md-4{
-  margin-bottom: 3.57143em;  //50px
+  margin-bottom: 3.57143em;
 
   &:last-child{
     margin-bottom: 0;
@@ -19,15 +27,15 @@ footer .container .row .col-md-4{
 
   h2{
     font-family: $font-family-title;
-    font-size: 1.42857em; //20px
+    font-size: 1.42857em;
     text-transform: capitalize;
     text-align: center;
     margin: 0 auto;
   }
 
   .decoration{
-    margin: .71429em auto;  //10px
-    margin-bottom: 1.07143em; //15px
+    margin: .71429em auto;
+    margin-bottom: 1.07143em;
     text-align: center;
 
     img{ margin: 0 auto; }
@@ -35,7 +43,7 @@ footer .container .row .col-md-4{
 
   p{
     font-family: $font-family-basic;
-    font-size: .85714em;  //12em
+    font-size: .85714em;
     text-align: center;
     margin: 0 auto;
     max-width: 350px;
@@ -49,7 +57,15 @@ footer .container .row .col-md-4{
       font-weight: bold;
     }
   }
+}
 
+
+
+
+//------------------------
+//-- Social media Footer
+//------------------------
+footer .container .row .col-md-4{
   .social, .payment{
     margin: 0 auto;
     margin-top: 1.07143em;  //15px
@@ -69,28 +85,15 @@ footer .container .row .col-md-4{
 
 
 
-
-
 //----------------------
 //    Responsive
 //----------------------
-@media(min-width:480px) {
-  body{ font-size: 87.5%; /*14px*/ }
-}
-
-
-
 @media(min-width:768px) {
-  body{ font-size: $font-size-body-sm; /*16px*/ }
   footer{ padding: 3em 0; }
+  footer .container .row .col-md-4{ margin-bottom: 0; }
 
   footer .container .row .col-md-4{
-    margin-bottom: 0;
-
-    h2{
-      font-size: 1.11111em;
-      max-width: $footer-col-max-width;
-    }
+    h2{ font-size: 1.11111em; max-width: $footer-col-max-width; }
 
     .decoration{
       margin: 1.11111em auto;
@@ -99,31 +102,13 @@ footer .container .row .col-md-4{
       img{ max-width: 11.11111em; /*200px*/  }
     }
 
-    p{
-      font-size: .66667em;
-      max-width: $footer-col-max-width;
-    }
+    p{ font-size: .8em; max-width: $footer-col-max-width; }
 
     .social, .payment{
       max-width: $footer-col-max-width;
       margin-top: 1.66667em;
 
-      a, p{
-        font-size: .88889em;  //16px
-        margin: 0 .19444em;
-      }
+      a, p{ font-size: 1em;  margin: 0 .19444em; }
     }
   }
-}
-
-
-
-@media(min-width:992px) {
-  body{ font-size: $font-size-body-md; /*18px*/ }
-}
-
-
-
-@media(min-width:1200px) {
-  body{ font-size: $font-size-body-lg; /*20px*/ }
 }

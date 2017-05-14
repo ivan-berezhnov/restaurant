@@ -1,95 +1,223 @@
-/*!
- * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
 body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding-top: 0;
+  position: relative; }
 
 html {
   width: 100%;
   height: 100%; }
 
-@media (min-width: 767px) {
-  .navbar {
+@media (min-width: 480px) {
+  body {
+    font-size: 14px;
+    /*14px*/ } }
+
+@media screen and (max-width: 767px) {
+  body {
+    margin-top: 50px; } }
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+    /*16px*/ } }
+
+@media (min-width: 992px) {
+  body {
+    font-size: 18px;
+    /*18px*/ } }
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    /*20px*/ } }
+
+@media screen and (max-width: 991px) {
+  .navbar-inverse .container {
+    width: 100%; }
+    .navbar-inverse .container .navbar-header {
+      width: 100%; }
+  .navbar-toggle {
+    display: block; }
+    .navbar-toggle:before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: calc(50% - (40px / 2));
+      left: calc(50% - (40px / 2));
+      border: 2px solid transparent;
+      border-radius: 100%;
+      transition: all 0.3s ease-in-out; }
+    .navbar-toggle.is-active {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+      .navbar-toggle.is-active .icon-bar:nth-child(3) {
+        opacity: 0; }
+      .navbar-toggle.is-active .icon-bar:nth-child(2) {
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px); }
+      .navbar-toggle.is-active .icon-bar:nth-child(4) {
+        -webkit-transform: translateY(-6px) rotate(90deg);
+        -ms-transform: translateY(-6px) rotate(90deg);
+        transform: translateY(-6px) rotate(90deg); }
+      .navbar-toggle.is-active:before {
+        border-color: white; }
+      .navbar-toggle.is-active:hover:before {
+        border-color: #cc9900; }
+    .navbar-toggle .icon-bar {
+      transition: all 0.3s ease-in-out; }
+    .navbar-toggle:hover .icon-bar {
+      background-color: #cc9900; }
+  .navbar-brand img {
+    max-width: 78px; }
+  .side-collapse-container {
+    width: 100%;
+    position: relative;
+    right: 0;
+    transition: right .4s; }
+    .side-collapse-container.out {
+      right: 200px; }
+  .side-collapse {
+    top: 50px;
+    bottom: 0;
+    right: -2px;
+    width: 200px;
+    position: fixed;
+    overflow: hidden;
+    transition: width .4s; }
+    .side-collapse.in {
+      width: 0; }
+  .navbar-collapse .navbar-nav {
+    float: none !important; }
+    .navbar-collapse .navbar-nav > li {
+      text-align: center;
+      width: 100%; }
+      .navbar-collapse .navbar-nav > li:nth-child(-n+7) a {
+        font-family: 'gentium_book_basicbold';
+        font-size: 1.14286em;
+        text-transform: capitalize;
+        border-bottom: 1px solid #cc9900;
+        padding: .9375em; }
+        .navbar-collapse .navbar-nav > li:nth-child(-n+7) a:hover {
+          background: #cc9900;
+          transition: all .3s; }
+  .navbar-collapse .navbar-nav .rs {
+    position: absolute;
+    bottom: .71428em;
+    width: 100%;
+    text-align: center;
+    height: 2.14286em; }
+    .navbar-collapse .navbar-nav .rs li {
+      display: inline-block;
+      outline: none; }
+      .navbar-collapse .navbar-nav .rs li a {
+        font-size: 1.28571em;
+        margin: 0 .35714em;
+        outline: none; }
+        .navbar-collapse .navbar-nav .rs li a:focus {
+          color: #cc9900; }
+        .navbar-collapse .navbar-nav .rs li a:hover {
+          color: white;
+          transition: all .3s; } }
+
+@media screen and (min-width: 992px) {
+  .navbar-inverse:first-child {
     padding: 0;
+    border: none;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
-    background: -moz-linear-gradient(top, black 0%, transparent 60%);
+    background: -moz-linear-gradient(top, black -50%, transparent 90%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, black 0%, transparent 60%);
+    background: -webkit-linear-gradient(top, black -50%, transparent 90%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, black 0%, transparent 30%);
+    background: linear-gradient(to bottom, black -50%, transparent 90%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$gray-black, endColorstr='#00000000',GradientType=0 );
     /* IE6-9 */ }
-    .navbar.navbar-default {
-      border: none; }
-    .navbar.top-nav-collapse {
-      padding: 0;
+    .navbar-inverse:first-child.top-nav-collapse {
       background: #000; }
-    .navbar .navbar-brand {
-      padding: 0; }
-  .navbar-default .navbar-nav > li {
-    margin: 0 12.5px; }
-    .navbar-default .navbar-nav > li:nth-child(7) {
+  .navbar-inverse:last-child {
+    background: transparent; }
+  .top-nav-collapse .side-collapse .navbar-collapse .navbar-nav > li a {
+    padding-top: 1.5em; }
+  .top-nav-collapse .side-collapse .navbar-collapse .navbar-nav .rs {
+    padding-top: calc(1.4em); }
+  .navbar-inverse .navbar-header .navbar-brand img {
+    max-width: 95%; }
+  .navbar-inverse.top-nav-collapse .navbar-header .navbar-brand img {
+    max-width: 65%; }
+  .side-collapse .navbar-collapse .navbar-nav .rs, .side-collapse .navbar-collapse .navbar-nav li {
+    display: inline-block; }
+  .side-collapse .navbar-collapse .navbar-nav > li {
+    margin: 0 .625em; }
+    .side-collapse .navbar-collapse .navbar-nav > li:nth-child(2) {
+      margin-left: 0; }
+    .side-collapse .navbar-collapse .navbar-nav > li:nth-child(7) {
       margin-right: 0; }
-    .navbar-default .navbar-nav > li.social {
-      margin: 0px; }
-      .navbar-default .navbar-nav > li.social a {
-        padding-left: .71429em;
-        padding-right: .71429em;
-        color: #cc9900; }
-        .navbar-default .navbar-nav > li.social a:hover, .navbar-default .navbar-nav > li.social a:focus {
-          color: #cc9900; }
-        .navbar-default .navbar-nav > li.social a:hover {
-          background: transparent;
-          color: #cc9900;
-          border: none;
-          margin-top: 5px; }
-    .navbar-default .navbar-nav > li a {
+    .side-collapse .navbar-collapse .navbar-nav > li a {
       font-family: 'gentium_book_basicbold';
-      font-size: 1em;
-      color: #fff;
+      font-size: .9em;
+      color: white;
       text-transform: capitalize;
       background-color: transparent;
-      padding-top: 30px;
-      margin-top: 5px;
+      padding-top: 2.5em;
+      margin-top: .25em;
       outline: none; }
-      .navbar-default .navbar-nav > li a:hover {
-        background-color: #fff;
-        border-top: 5px solid #fff;
+      .side-collapse .navbar-collapse .navbar-nav > li a:hover {
+        background-color: white;
+        border-top: 0.25em solid white;
         margin-top: 0;
         color: #000; }
-      .navbar-default .navbar-nav > li a:focus {
-        color: #fff; }
-    .navbar-default .navbar-nav > li.active {
+      .side-collapse .navbar-collapse .navbar-nav > li a:focus {
+        color: white; }
+      .side-collapse .navbar-collapse .navbar-nav > li a:active {
+        color: #000; }
+    .side-collapse .navbar-collapse .navbar-nav > li.active {
       background: transparent; }
-      .navbar-default .navbar-nav > li.active a {
+      .side-collapse .navbar-collapse .navbar-nav > li.active a {
         background-color: transparent;
-        border-top: 5px solid #FFF;
+        border-top: 0.25em solid white;
         margin-top: 0;
-        color: #fff; }
-        .navbar-default .navbar-nav > li.active a:hover {
-          background-color: #fff;
-          color: #000; } }
+        color: white; }
+        .side-collapse .navbar-collapse .navbar-nav > li.active a:hover {
+          background-color: white;
+          color: #000; }
+  .side-collapse .navbar-collapse .navbar-nav .rs {
+    padding-top: 2.5em; }
+    .side-collapse .navbar-collapse .navbar-nav .rs .social {
+      margin: 0px; }
+      .side-collapse .navbar-collapse .navbar-nav .rs .social a {
+        padding-left: 3px;
+        padding-right: 3px;
+        color: #ffc61a; }
+        .side-collapse .navbar-collapse .navbar-nav .rs .social a:hover, .side-collapse .navbar-collapse .navbar-nav .rs .social a:focus {
+          color: #ffc61a; }
+        .side-collapse .navbar-collapse .navbar-nav .rs .social a:hover {
+          background: transparent;
+          color: white;
+          border: none;
+          margin-top: .25em; } }
 
 section {
-  padding-top: 150px;
   text-align: center;
   background: #eeeeee;
-  padding: 2.85714em 1.42857em; }
+  padding: 50px 1.42857em; }
   section:nth-child(2n) {
     background: #fcfcfc; }
-  section.home-section, section.igredients-section, section.reviews-section {
-    background-size: cover; }
+  section.home-section, section.ingredients-section, section.reviews-section, section.about-section, section.menu-section, section.reservations-section {
+    min-height: 100%; }
   section.home-section {
-    background: url(../../images/bg-home-section.jpg); }
-  section.igredients-section {
-    background: url(../../images/bg-ingredient-section.jpg); }
+    background-image: url(../../images/bg-home-section.jpg);
+    background-size: cover; }
+  section.ingredients-section {
+    background-image: url(../../images/bg-ingredient-section.jpg);
+    background-size: cover; }
   section.reviews-section {
-    background: url(../../images/bg-reviews-section.jpg); }
+    background-image: url(../../images/bg-reviews-section.jpg);
+    background-size: cover; }
   section.about-section, section.reservations-section {
     background-image: url(../../images/motif-section.png);
     background-size: auto; }
@@ -97,32 +225,10 @@ section {
     background-image: url(../../images/motif-menu-section.png);
     background-size: auto; }
 
-.home-section {
-  height: 100%; }
-  .home-section .container .row .col-sm-12 h1 {
-    font-family: "yeseva_oneregular";
-    font-size: 4em; }
-  .home-section .container .row .col-sm-12 .decoration {
-    margin: 2.14286em 0; }
-  .home-section .container .row .col-sm-12 .link {
-    max-width: 250px;
-    margin: 0 auto; }
-    .home-section .container .row .col-sm-12 .link .btn {
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid #000;
-      color: white;
-      font-size: 18px;
-      font-family: "latoregular";
-      text-transform: uppercase;
-      padding: .71429em 2.14286em;
-      display: inline-block;
-      outline: none; }
-      .home-section .container .row .col-sm-12 .link .btn.btn-default {
-        background: rgba(255, 255, 255, 0.3);
-        border: 1px solid white;
-        color: white;
-        margin-left: 0;
-        margin-top: 1.07143em; }
+.navbar-inverse ~ section {
+  padding-top: 50px; }
+  .navbar-inverse ~ section .container {
+    margin-top: 25px; }
 
 .section h2 {
   font-family: "yeseva_oneregular";
@@ -141,6 +247,40 @@ section {
   margin: 0 auto;
   margin-bottom: 50px; }
 
+.home-section .container .row .col-xs-12 h1 {
+  font-family: "yeseva_oneregular";
+  font-size: 4em; }
+
+.home-section .container .row .col-xs-12 .decoration {
+  margin: 2.14286em 0; }
+
+.home-section .container .row .col-xs-12 .link {
+  max-width: 250px;
+  margin: 0 auto; }
+  .home-section .container .row .col-xs-12 .link .btn {
+    background: rgba(25, 25, 25, 0.6);
+    border: 1px solid #191919;
+    color: white;
+    font-size: 18px;
+    font-family: "latoregular";
+    text-transform: uppercase;
+    padding: .71429em 2.14286em;
+    display: inline-block;
+    outline: none; }
+    .home-section .container .row .col-xs-12 .link .btn:hover {
+      background: rgba(25, 25, 25, 0.8);
+      transition: background .3s; }
+    .home-section .container .row .col-xs-12 .link .btn.btn-default {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid white;
+      color: white;
+      margin-left: 0;
+      margin-top: 1.07143em; }
+      .home-section .container .row .col-xs-12 .link .btn.btn-default:hover {
+        background: rgba(255, 255, 255, 0.7);
+        transition: background .3s;
+        color: #000; }
+
 .about-section .container .row .col-xs-12 p {
   color: #000; }
 
@@ -153,18 +293,28 @@ section {
 .about-section .container .row .col-xs-12:last-child {
   display: none; }
 
-.igredients-section .container .row .col-xs-12 {
+.ingredients-section .container .row .col-xs-12 {
   background: rgba(0, 0, 0, 0.7);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   padding: 2.75em;
   padding-top: 3em;
   max-width: 500px;
-  margin: 0 auto; }
-  .igredients-section .container .row .col-xs-12.pull-right {
+  margin: 0 auto;
+  display: inline-block; }
+  .ingredients-section .container .row .col-xs-12.pull-right {
     float: none !important; }
-  .igredients-section .container .row .col-xs-12 p {
+  .ingredients-section .container .row .col-xs-12 p {
     margin-bottom: 2.25em;
     width: 100%; }
-  .igredients-section .container .row .col-xs-12 .col-xs-4 img {
+  .ingredients-section .container .row .col-xs-12 .col-xs-4 img {
     margin: 0 auto;
     border: 0.25em solid rgba(255, 255, 255, 0.1);
     border-radius: 100%;
@@ -174,26 +324,28 @@ section {
 .reservations-section .container .row > .col-xs-12:first-child {
   display: none; }
 
-.reservations-section .container .row > .col-xs-12:last-child form {
+.reservations-section .container .row > .col-xs-12:nth-child(2) form {
   max-width: 430px;
   margin: 0 auto; }
-  .reservations-section .container .row > .col-xs-12:last-child form * {
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form * {
     outline: none; }
-  .reservations-section .container .row > .col-xs-12:last-child form .form-group {
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form .form-group {
     text-align: left;
-    width: calc(50% - (1.42857em /2));
-    margin-bottom: 2.14286em; }
-    .reservations-section .container .row > .col-xs-12:last-child form .form-group:nth-child(2n) {
-      margin-left: 1.42857em; }
-  .reservations-section .container .row > .col-xs-12:last-child form label {
+    width: calc(100% - (1.42857em /2));
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 1.42857em;
+    float: none; }
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form label {
     font-family: "open_sansbold";
     font-size: 1em; }
-  .reservations-section .container .row > .col-xs-12:last-child form input, .reservations-section .container .row > .col-xs-12:last-child form select {
-    border-color: #c8c8c8;
-    border-radius: 0; }
-    .reservations-section .container .row > .col-xs-12:last-child form input:focus, .reservations-section .container .row > .col-xs-12:last-child form select:focus {
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form input, .reservations-section .container .row > .col-xs-12:nth-child(2) form select {
+    border-color: #c8c8c8; }
+    .reservations-section .container .row > .col-xs-12:nth-child(2) form input:focus, .reservations-section .container .row > .col-xs-12:nth-child(2) form select:focus {
       border-color: #cc9900; }
-  .reservations-section .container .row > .col-xs-12:last-child form button {
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form select {
+    border-radius: 0 !important; }
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form button {
     padding: .75em 3em;
     font-family: "open_sansregular";
     font-size: 1em;
@@ -245,9 +397,22 @@ section {
       text-align: left;
       margin-bottom: 0;
       width: 100%; }
+  .menu-section .container .row .col-sm-6:last-child .row:last-child {
+    margin-bottom: 0; }
+    .menu-section .container .row .col-sm-6:last-child .row:last-child .offre:last-child .menu-content {
+      padding-bottom: 0; }
 
 .reviews-section .container .row .col-xs-12 {
   background: rgba(0, 0, 0, 0.7);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   float: none;
   margin: 0 auto;
   padding-top: 2.75em;
@@ -295,6 +460,9 @@ section {
       margin-left: 1.5em; } }
 
 @media (min-width: 768px) {
+  .section.ingredients-section, .section.reviews-section, .section.about-section, .section.reservations-section {
+    height: auto;
+    min-height: 100%; }
   .section h2 {
     font-size: 1.875em; }
   .section .decoration {
@@ -307,18 +475,26 @@ section {
     font-size: .875em;
     max-width: 430px;
     margin-bottom: 2.5em; }
-  .home-section .container .row .col-sm-12 h1 {
-    font-size: 4.5em; }
-  .home-section .container .row .col-sm-12 .decoration {
-    margin: 1.5em 0; }
-  .home-section .container .row .col-sm-12 .link {
-    max-width: none; }
-    .home-section .container .row .col-sm-12 .link .btn {
-      font-size: 1em;
-      padding: .625em 2.14286em; }
-      .home-section .container .row .col-sm-12 .link .btn.btn-default {
-        margin-top: 0;
-        margin-left: 1.5em; }
+  .home-section {
+    padding-top: 0;
+    padding-bottom: 0; }
+    .home-section .container .row {
+      margin-top: 50vh;
+      -webkit-transform: translateY(-45%);
+      -ms-transform: translateY(-45%);
+      transform: translateY(-45%); }
+      .home-section .container .row .col-sm-12 h1 {
+        font-size: 4.5em; }
+      .home-section .container .row .col-sm-12 .decoration {
+        margin: 1.5em 0; }
+      .home-section .container .row .col-sm-12 .link {
+        max-width: none; }
+        .home-section .container .row .col-sm-12 .link .btn {
+          font-size: 1em;
+          padding: .625em 2.14286em; }
+          .home-section .container .row .col-sm-12 .link .btn.btn-default {
+            margin-top: 0;
+            margin-left: 1.5em; }
   .about-section .container .row .col-sm-6:first-child > img {
     padding-left: 3.88889em;
     max-width: 280px; }
@@ -334,33 +510,34 @@ section {
     float: left; }
     .reservations-section .container .row > .col-sm-6:first-child img:first-child {
       margin-right: 1.25em; }
-  .reservations-section .container .row > .col-sm-6:last-child form {
+  .reservations-section .container .row > .col-sm-6:nth-child(2) form {
     max-width: 430px;
     margin: 0 auto; }
-    .reservations-section .container .row > .col-sm-6:last-child form .form-group {
+    .reservations-section .container .row > .col-sm-6:nth-child(2) form .form-group {
       text-align: left;
       width: calc(50% - (1.5em /2));
-      margin-bottom: 1.25em; }
-      .reservations-section .container .row > .col-sm-6:last-child form .form-group:nth-child(2n) {
+      margin-bottom: 1.25em;
+      float: left; }
+      .reservations-section .container .row > .col-sm-6:nth-child(2) form .form-group:nth-child(2n) {
         margin-left: 1.5em; }
-    .reservations-section .container .row > .col-sm-6:last-child form label {
+    .reservations-section .container .row > .col-sm-6:nth-child(2) form label {
       font-size: .875em; }
-    .reservations-section .container .row > .col-sm-6:last-child form input, .reservations-section .container .row > .col-sm-6:last-child form select {
+    .reservations-section .container .row > .col-sm-6:nth-child(2) form input, .reservations-section .container .row > .col-sm-6:nth-child(2) form select {
       font-size: .875em; }
-    .reservations-section .container .row > .col-sm-6:last-child form button {
+    .reservations-section .container .row > .col-sm-6:nth-child(2) form button {
       padding: .6em 3em;
       font-size: .875em;
       outline: none; }
-  .igredients-section .container .row .col-sm-6 {
+  .ingredients-section .container .row .col-sm-6 {
     padding: 2.75em;
     padding-top: 3em;
     max-width: none;
     margin: 0; }
-    .igredients-section .container .row .col-sm-6.pull-right {
+    .ingredients-section .container .row .col-sm-6.pull-right {
       float: right !important; }
-    .igredients-section .container .row .col-sm-6 p {
+    .ingredients-section .container .row .col-sm-6 p {
       margin-bottom: 2.25em; }
-    .igredients-section .container .row .col-sm-6 .col-sm-4 img {
+    .ingredients-section .container .row .col-sm-6 .col-sm-4 img {
       border: 0.25em solid rgba(255, 255, 255, 0.1); }
   .reviews-section .container .row .col-sm-6 {
     padding-top: 2.75em;
@@ -405,29 +582,35 @@ section {
           margin-top: .5em; } }
 
 @media (min-width: 992px) {
+  .navbar-inverse ~ section {
+    padding-top: 3.35em; }
+    .navbar-inverse ~ section .container {
+      margin-top: 1.25em; }
   .section h2 {
     font-size: 1.8em; }
   .section p {
     font-size: .8em; }
   .section .decoration img {
     width: 50%; }
-  .home-section .container .row .col-sm-12 .link .btn {
-    font-size: .9em;
-    padding: .65em 1.75em; }
+  .home-section .container .row {
+    margin-top: 50vh;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .home-section .container .row .col-sm-12 .link .btn {
+      font-size: .9em;
+      padding: .65em 1.75em; }
   .reservations-section .container .row .col-sm-6:first-child img {
     max-width: calc( 50% - 1.5em); }
     .reservations-section .container .row .col-sm-6:first-child img:first-child {
       margin-right: 1.5em; }
-  .reservations-section .container .row .col-sm-6:last-child form .form-group {
+  .reservations-section .container .row .col-sm-6:nth-child(2) form .form-group {
     margin-bottom: 1.5em; }
-  .reservations-section .container .row .col-sm-6:last-child form label {
+  .reservations-section .container .row .col-sm-6:nth-child(2) form label {
     font-size: .8em; }
-  .reservations-section .container .row .col-sm-6:last-child form input, .reservations-section .container .row .col-sm-6:last-child form select {
+  .reservations-section .container .row .col-sm-6:nth-child(2) form input, .reservations-section .container .row .col-sm-6:nth-child(2) form select {
     font-size: .8em; } }
 
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
-of those sections to manage the look and feel of the site. */
 footer {
   background: #191919;
   padding: 3em 0; }
@@ -462,56 +645,39 @@ footer .container .row .col-md-4 {
     footer .container .row .col-md-4 p strong {
       font-family: "open_sansbold";
       font-weight: bold; }
-  footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .payment {
-    margin: 0 auto;
-    margin-top: 1.07143em;
-    text-align: center; }
-    footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, footer .container .row .col-md-4 .payment a, footer .container .row .col-md-4 .payment p {
-      color: white;
-      font-size: 1.14285em;
-      margin: 0 .25em;
-      display: inline-block; }
-    footer .container .row .col-md-4 .social a:hover, footer .container .row .col-md-4 .payment a:hover {
-      color: #cc9900; }
 
-@media (min-width: 480px) {
-  body {
-    font-size: 87.5%;
-    /*14px*/ } }
+footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .payment {
+  margin: 0 auto;
+  margin-top: 1.07143em;
+  text-align: center; }
+  footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, footer .container .row .col-md-4 .payment a, footer .container .row .col-md-4 .payment p {
+    color: white;
+    font-size: 1.14285em;
+    margin: 0 .25em;
+    display: inline-block; }
+  footer .container .row .col-md-4 .social a:hover, footer .container .row .col-md-4 .payment a:hover {
+    color: #cc9900; }
 
 @media (min-width: 768px) {
-  body {
-    font-size: 100%;
-    /*16px*/ }
   footer {
     padding: 3em 0; }
   footer .container .row .col-md-4 {
     margin-bottom: 0; }
-    footer .container .row .col-md-4 h2 {
-      font-size: 1.11111em;
-      max-width: 370px; }
-    footer .container .row .col-md-4 .decoration {
-      margin: 1.11111em auto;
-      max-width: 370px; }
-      footer .container .row .col-md-4 .decoration img {
-        max-width: 11.11111em;
-        /*200px*/ }
-    footer .container .row .col-md-4 p {
-      font-size: .66667em;
-      max-width: 370px; }
-    footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .payment {
-      max-width: 370px;
-      margin-top: 1.66667em; }
-      footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, footer .container .row .col-md-4 .payment a, footer .container .row .col-md-4 .payment p {
-        font-size: .88889em;
-        margin: 0 .19444em; } }
-
-@media (min-width: 992px) {
-  body {
-    font-size: 112.49995%;
-    /*18px*/ } }
-
-@media (min-width: 1200px) {
-  body {
-    font-size: 124.9999%;
-    /*20px*/ } }
+  footer .container .row .col-md-4 h2 {
+    font-size: 1.11111em;
+    max-width: 370px; }
+  footer .container .row .col-md-4 .decoration {
+    margin: 1.11111em auto;
+    max-width: 370px; }
+    footer .container .row .col-md-4 .decoration img {
+      max-width: 11.11111em;
+      /*200px*/ }
+  footer .container .row .col-md-4 p {
+    font-size: .8em;
+    max-width: 370px; }
+  footer .container .row .col-md-4 .social, footer .container .row .col-md-4 .payment {
+    max-width: 370px;
+    margin-top: 1.66667em; }
+    footer .container .row .col-md-4 .social a, footer .container .row .col-md-4 .social p, footer .container .row .col-md-4 .payment a, footer .container .row .col-md-4 .payment p {
+      font-size: 1em;
+      margin: 0 .19444em; } }

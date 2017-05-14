@@ -1,22 +1,32 @@
+//------------------------
+//-- Container Sections
+//------------------------
 section{
-  padding-top: 150px;
   text-align: center;
   background: lighten($gray-light, 15%);
-  padding: 2.85714em 1.42857em;
+  padding: 50px 1.42857em;
 
-  &:nth-child(2n){
-    background: $gray-lighting;
+  &:nth-child(2n){ background: $gray-lighting; }
+
+  .home-section,
+  .ingredients-section,
+  .reviews-section{
+    // height: calc(100% - 50px);
   }
 
   &.home-section,
-  &.igredients-section,
-  &.reviews-section{
-    background-size: cover;
+  &.ingredients-section,
+  &.reviews-section,
+  &.about-section,
+  &.menu-section,
+  &.reservations-section{
+    min-height: 100%;
+
   }
 
-  &.home-section{ background: url(../../images/bg-home-section.jpg); }
-  &.igredients-section{ background: url(../../images/bg-ingredient-section.jpg); }
-  &.reviews-section{ background: url(../../images/bg-reviews-section.jpg); }
+  &.home-section{ background-image: url(../../images/bg-home-section.jpg); background-size: cover; }
+  &.ingredients-section{ background-image: url(../../images/bg-ingredient-section.jpg); background-size: cover;}
+  &.reviews-section{ background-image: url(../../images/bg-reviews-section.jpg); background-size: cover;}
 
   &.about-section,
   &.reservations-section{
@@ -31,12 +41,52 @@ section{
 }
 
 
+.navbar-inverse ~ section{
+    padding-top: 50px;
+
+    .container{
+      margin-top: 25px;
+    }
+}
 
 
+
+
+//------------------------
+//-- Content Sections
+//------------------------
+.section{
+  h2{
+    font-family: $font-family-title;
+    font-size: $font-size-h1;
+  }
+
+  .decoration{
+    margin: 15px 0;
+    margin-bottom: 35px;
+  }
+
+  p{
+    font-family: $font-family-content;
+    font-size: 14px;
+    text-align: center;
+    width: 85%;
+    max-width: 430px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+
+//------------------------
+//-- Home section
+//------------------------
 .home-section{
-  height: 100%;
+  // height: 100%;
 
-  .container .row .col-sm-12{
+  .container .row .col-xs-12{
     h1{
       font-family: $font-family-title;
       font-size: 4em;
@@ -61,12 +111,23 @@ section{
         display: inline-block;
         outline: none;
 
+        &:hover{
+          background: rgba($btn-default-color, .8);
+          transition: background .3s;
+        }
+
         &.btn-default{
-          background: rgba($gray-whiter, .3);
+          background: rgba($gray-whiter, .2);
           border: 1px solid $gray-whiter;
           color: $gray-whiter;
           margin-left: 0;
           margin-top: 1.07143em;
+
+          &:hover{
+            background: rgba($gray-whiter, .7);
+            transition: background .3s;
+            color: $gray-black;
+          }
         }
       }
     }
@@ -76,32 +137,9 @@ section{
 
 
 
-
-
-
-.section{
-  h2{
-    font-family: $font-family-title;
-    font-size: $font-size-h1;
-  }
-
-  .decoration{
-    margin: 15px 0;
-    margin-bottom: 35px;
-  }
-
-  p{
-    font-family: $font-family-content;
-    font-size: 14px;
-    text-align: center;
-    width: 85%;
-    max-width: 430px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-  }
-}
-
-
+//------------------------
+//-- About section
+//------------------------
 .about-section .container .row .col-xs-12{
   p{
     color: $gray-black;
@@ -120,13 +158,24 @@ section{
 
 
 
-.igredients-section .container .row{
+//------------------------
+//-- Ingredients section
+//------------------------
+.ingredients-section .container .row{
   .col-xs-12{
     background: rgba($gray-black, .7);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,.7) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%,rgba(0,0,0,.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%,rgba(0,0,0,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     padding: 2.75em;
     padding-top: 3em;
     max-width: 500px;
     margin: 0 auto;
+    display: inline-block;
 
     &.pull-right{ float: none !important; }
 
@@ -148,9 +197,14 @@ section{
 }
 
 
+
+
+//-------------------------
+//-- reservations section
+//-------------------------
 .reservations-section .container .row{
   > .col-xs-12:first-child{ display: none; }
-  > .col-xs-12:last-child{
+  > .col-xs-12:nth-child(2){
     form{
       max-width: 430px;
       margin: 0 auto;
@@ -159,12 +213,11 @@ section{
 
       .form-group{
         text-align: left;
-        width: calc(50% - (1.42857em /2));
-        margin-bottom: 2.14286em;
-
-        &:nth-child(2n){
-          margin-left: 1.42857em;
-        }
+        width: calc(100% - (1.42857em /2));
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 1.42857em;
+        float: none;
       }
 
       label{
@@ -174,12 +227,13 @@ section{
 
       input, select{
         border-color: $gray-light;
-        border-radius: 0;
 
         &:focus{
           border-color: $brand-primary;
         }
       }
+
+      select{ border-radius: 0 !important; }
 
       button{
         padding: .75em 3em;
@@ -193,6 +247,10 @@ section{
 
 
 
+
+//------------------------
+//-- Menu section
+//------------------------
 .menu-section .container .row .col-sm-6{
   padding: 0 1.42857em;
 
@@ -260,13 +318,32 @@ section{
       width: 100%;
     }
   }
+
+  &:last-child{
+    .row:last-child{
+      margin-bottom: 0;
+
+      .offre:last-child .menu-content{ padding-bottom: 0; }
+    }
+  }
 }
 
 
 
+
+//------------------------
+//-- Reviews section
+//------------------------
 .reviews-section{
   .container .row .col-xs-12{
     background: rgba($gray-black, .7);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.8) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.6) 0%,rgba(0,0,0,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%,rgba(0,0,0,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     float: none;
     margin: 0 auto;
     padding-top: 2.75em;
@@ -319,18 +396,21 @@ section{
 
 
 
-
-
-
 //----------------------
 //    Responsive
 //----------------------
 @media(min-width:500px) {
-  .home-section .container .row .col-sm-12{
-    .link{
-      max-width: none;
+  .home-section{
 
-      .btn.btn-default{ margin-top: 0; margin-left: 1.5em; }
+
+    .container .row{
+      .col-sm-12{
+        .link{
+          max-width: none;
+
+          .btn.btn-default{ margin-top: 0; margin-left: 1.5em; }
+        }
+      }
     }
   }
 }
@@ -338,6 +418,14 @@ section{
 
 @media(min-width:768px) {
   .section{
+    &.ingredients-section,
+    &.reviews-section,
+    &.about-section,
+    &.reservations-section{
+      height: auto;
+      min-height: 100%;
+    }
+
     h2{
       font-size: 1.875em;
     }
@@ -360,21 +448,37 @@ section{
   }
 
 
-  .home-section .container .row .col-sm-12{
-    h1{ font-size: 4.5em; }
-    .decoration{ margin: 1.5em 0; }
+  //-------------------
 
-    .link{
-      max-width: none;
 
-      .btn{
-        font-size: 1em;
-        padding: .625em 2.14286em;
+  .home-section{
+    padding-top: 0;
+    padding-bottom: 0;
 
-        &.btn-default{ margin-top: 0; margin-left: 1.5em; }
+    .container .row{
+      margin-top: 50vh;
+      transform: translateY(-45%);
+
+      .col-sm-12{
+        h1{ font-size: 4.5em; }
+        .decoration{ margin: 1.5em 0; }
+
+        .link{
+          max-width: none;
+
+          .btn{
+            font-size: 1em;
+            padding: .625em 2.14286em;
+
+            &.btn-default{ margin-top: 0; margin-left: 1.5em; }
+          }
+        }
       }
     }
   }
+
+
+  //-------------------
 
 
   .about-section .container .row .col-sm-6{
@@ -393,6 +497,10 @@ section{
     }
   }
 
+
+  //-------------------
+
+
   .reservations-section .container .row{
     > .col-sm-6:first-child{ display: block; }
     > .col-sm-6{
@@ -403,7 +511,7 @@ section{
         &:first-child{ margin-right: 1.25em; }
       }
 
-      &:last-child{
+      &:nth-child(2){
         form{
           max-width: 430px;
           margin: 0 auto;
@@ -412,6 +520,7 @@ section{
             text-align: left;
             width: calc(50% - (1.5em /2));
             margin-bottom: 1.25em;
+            float: left;
 
             &:nth-child(2n){ margin-left: 1.5em; }
           }
@@ -429,7 +538,11 @@ section{
     }
   }
 
-  .igredients-section .container .row{
+
+  //-------------------
+
+
+  .ingredients-section .container .row{
     .col-sm-6{
       padding: 2.75em;
       padding-top: 3em;
@@ -447,6 +560,9 @@ section{
       }
     }
   }
+
+
+  //-------------------
 
 
   .reviews-section{
@@ -482,6 +598,9 @@ section{
   }
 
 
+  //-------------------
+
+
   .menu-section .container .row .col-sm-6{
     padding: 0 20px;
 
@@ -514,6 +633,14 @@ section{
 
 
 @media(min-width:992px) {
+  .navbar-inverse ~ section{
+      padding-top: 3.35em;
+
+      .container{
+        margin-top: 1.25em;
+      }
+  }
+
   .section{
     h2{ font-size: 1.8em;  }
     p{ font-size: .8em; }
@@ -522,10 +649,17 @@ section{
     }
   }
 
-  .home-section .container .row .col-sm-12{
-    .link .btn{
-      font-size: .9em;
-      padding: .65em 1.75em;
+  .home-section{
+    .container .row{
+      margin-top: 50vh;
+      transform: translateY(-50%);
+
+      .col-sm-12{
+        .link .btn{
+          font-size: .9em;
+          padding: .65em 1.75em;
+        }
+      }
     }
   }
 
@@ -536,7 +670,7 @@ section{
       &:first-child{ margin-right: 1.5em; }
     }
 
-    &:last-child{
+    &:nth-child(2){
       form{
         .form-group{ margin-bottom: 1.5em; }
         label{ font-size: .8em; }
@@ -544,307 +678,4 @@ section{
       }
     }
   }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
-of those sections to manage the look and feel of the site. */
-//
-// section{
-//     padding-top: 150px;
-//     text-align: center;
-//     background: #eee;
-//
-//     &:nth-child(2n){
-//       background: #fcfcfc;
-//     }
-//
-//     &.home-section{
-//       background: url(../../images/bg-home-section.jpg);
-//       background-size: cover;
-//     }
-//
-//     &.igredients-section{
-//       background: url(../../images/bg-ingredient-section.jpg);
-//       background-size: cover;
-//     }
-//
-//     &.reviews-section{
-//       background: url(../../images/bg-reviews-section.jpg);
-//       background-size: cover;
-//     }
-//
-//     &.about-section,
-//     &.reservations-section{
-//       background-color: $gray-lighter;
-//       background-image: url(../../images/motif-section.png);
-//       background-size: 115px 100px;
-//     }
-//
-//     &.menu-section{
-//       background-color: $gray-lighter;
-//       background-image: url(../../images/motif-menu-section.png);
-//       background-size: 124px 71px;
-//     }
-// }
-//
-//
-//
-//
-//
-// .home-section{
-//   height: 100%;
-//
-//   .container .row .col-lg-12{
-//     h1{
-//       font-family: $font-family-title;
-//       font-size: 4.28em;
-//     }
-//
-//     .decoration{
-//       margin: 30px 0;
-//     }
-//
-//     .btn{
-//       background: rgba($btn-default-color, .6);
-//       border: 1px solid $btn-default-color;
-//       color: $gray-whiter;
-//       font-size: $font-size-large;
-//       font-family: $font-family-content;
-//       text-transform: uppercase;
-//       padding: 15px 25px;
-//
-//       &.btn-default{
-//         background: rgba($gray-whiter, .3);
-//         border: 1px solid $gray-whiter;
-//         color: $gray-whiter;
-//         margin-left: 30px;
-//       }
-//     }
-//   }
-// }
-//
-//
-//
-//
-//
-//
-//
-// .section{
-//   h2{
-//     font-family: $font-family-title;
-//     font-size: $font-size-h1;
-//   }
-//
-//   .decoration{
-//     margin: 15px 0;
-//     margin-bottom: 35px;
-//   }
-//
-//   p{
-//     font-family: $font-family-content;
-//     font-size: 14px;
-//     text-align: center;
-//     max-width: 430px;
-//     margin: 0 auto;
-//     margin-bottom: 50px;
-//   }
-// }
-//
-//
-// .about-section .container .row .col-md-6{
-//   p{
-//     color: $gray-black;
-//   }
-//
-//   > img{
-//     margin: 0 auto;
-//     padding-left: 70px;
-//   }
-//
-//   &:last-child img{
-//     max-width: 570px;
-//     width: 100%;
-//   }
-// }
-//
-//
-// .igredients-section .container .row{
-//   .col-md-6{
-//     background: rgba($gray-black, .7);
-//     padding: 80px;
-//     padding-top: 85px;
-//
-//     p{
-//       margin-bottom: 70px;
-//     }
-//
-//     .col-md-4{
-//       img{
-//         margin: 0 auto;
-//       }
-//     }
-//   }
-// }
-//
-//
-// .reservations-section .container .row{
-//   .col-md-6:last-child{
-//     form{
-//       max-width: 430px;
-//       margin: 0 auto;
-//
-//       *{
-//         outline: none;
-//       }
-//
-//       .form-group{
-//         text-align: left;
-//         width: calc(50% - (30px /2));
-//         margin-bottom: 30px;
-//
-//         &:nth-child(2n){
-//           margin-left: 30px;
-//         }
-//       }
-//
-//       label{
-//         font-family: $font-family-bold;
-//         font-size: $font-size-base;
-//       }
-//
-//       input, select{
-//         border-color: $gray-light;
-//         &:focus{
-//           border-color: $brand-primary;
-//         }
-//       }
-//
-//       button{
-//         padding: 15px 60px;
-//         font-family: $font-family-basic;
-//       }
-//     }
-//
-//   }
-// }
-//
-//
-//
-// .menu-section .container .row .col-md-6 .row{
-//   margin-bottom: 70px;
-//   max-width: 430px;
-//   margin: 0 auto;
-//
-//   + .row{
-//     margin-top: 70px;
-//   }
-//
-//   .offre{
-//     margin-top: 30px;
-//
-//     &:first-child{ margin-top: 0;}
-//     &.special{ margin-top: 10px;}
-//   }
-//
-//   .block-special{
-//     text-align: right;
-//
-//     > span{
-//       display: inline-block;
-//       background: $brand-primary;
-//       padding: 10px 15px;
-//       color: $gray-whiter;
-//     }
-//   }
-//
-//   .menu-content{
-//     margin: 0 auto;
-//     padding: 10px;
-//
-//     &.special{
-//       border: 1px solid $brand-primary;
-//     }
-//   }
-//
-//   h2{
-//     text-transform: capitalize;
-//   }
-//
-//   h3{
-//     display: block;
-//     font-family: $font-family-title;
-//     text-transform: capitalize;
-//     text-align: left;
-//     margin-bottom: 15px;
-//
-//     &:after{
-//       content: "";
-//       background: $brand-primary;
-//       height: 1px;
-//       display: block;
-//       margin-top: 15px;
-//     }
-//   }
-//
-//   p{
-//     text-align: left;
-//     margin-bottom: 0;
-//   }
-// }
-//
-//
-//
-// .reviews-section{
-//   .container .row .col-md-6{
-//     background: rgba($gray-black, .7);
-//     float: none;
-//     margin: 0 auto;
-//     padding: 80px 70px;
-//     padding-bottom: 180px;
-//
-//     h2{
-//       font-family: $font-family-title;
-//       font-size: $font-size-h1;
-//       text-transform: capitalize;
-//     }
-//
-//     p{
-//       font-family: $font-family-citation;
-//       font-size: $font-size-large;
-//       line-height: 1.2;
-//       width: 80%;
-//       margin: 0 auto;
-//     }
-//   }
-// }
-//
-//
-//
-// .reservations-section{
-//   .container .row .col-md-6{
-//     img.demi{
-//       width: calc(50% - 50px);
-//       float: left;
-//
-//       &:first-child{
-//         margin-right: 50px;
-//       }
-//     }
-//   }
-// }

@@ -207,6 +207,14 @@ section{
         margin: 0 auto;
         margin-bottom: 1.42857em;
         float: none;
+
+        &:first-child{ display: block; }
+
+        &.has-error{
+          input{
+            border-color: $state-danger-text;
+          }
+        }
       }
 
       label{
@@ -224,11 +232,27 @@ section{
 
       select{ border-radius: 0 !important; }
 
-      button{
-        padding: .75em 3em;
-        font-family: $font-family-basic;
-        font-size: 1em;
-        outline: none;
+      .submit{
+        width: calc(100% - 1.5em) !important;
+        max-width: none;
+        float: none !important;
+        padding: 0 !important;
+        text-align: center !important;
+        margin-right: 0 !important;
+
+        button{
+          padding: .75em 3em;
+          font-family: $font-family-basic;
+          font-size: 1em;
+          outline: none;
+          margin: 0 auto;
+        }
+      }
+
+      #msgSubmit{
+        margin-bottom: 1.5em;
+        font-family: $font-family-content;
+        font-size: 3rem;
       }
     }
   }

@@ -149,42 +149,44 @@ html {
     max-width: 95%; }
   .navbar-inverse.top-nav-collapse .navbar-header .navbar-brand img {
     max-width: 65%; }
-  .side-collapse .navbar-collapse .navbar-nav .rs, .side-collapse .navbar-collapse .navbar-nav li {
-    display: inline-block; }
-  .side-collapse .navbar-collapse .navbar-nav > li {
-    margin: 0 .625em; }
-    .side-collapse .navbar-collapse .navbar-nav > li:nth-child(2) {
-      margin-left: 0; }
-    .side-collapse .navbar-collapse .navbar-nav > li:nth-child(7) {
-      margin-right: 0; }
-    .side-collapse .navbar-collapse .navbar-nav > li a {
-      font-family: 'gentium_book_basicbold';
-      font-size: .9em;
-      color: white;
-      text-transform: capitalize;
-      background-color: transparent;
-      padding-top: 2.5em;
-      margin-top: .25em;
-      outline: none; }
-      .side-collapse .navbar-collapse .navbar-nav > li a:hover {
-        background-color: white;
-        border-top: 0.25em solid white;
-        margin-top: 0;
-        color: #000; }
-      .side-collapse .navbar-collapse .navbar-nav > li a:focus {
-        color: white; }
-      .side-collapse .navbar-collapse .navbar-nav > li a:active {
-        color: #000; }
-    .side-collapse .navbar-collapse .navbar-nav > li.active {
-      background: transparent; }
-      .side-collapse .navbar-collapse .navbar-nav > li.active a {
+  .side-collapse .navbar-collapse .navbar-nav {
+    width: 800px; }
+    .side-collapse .navbar-collapse .navbar-nav .rs, .side-collapse .navbar-collapse .navbar-nav li {
+      display: inline-block; }
+    .side-collapse .navbar-collapse .navbar-nav > li {
+      margin: 0 .625em; }
+      .side-collapse .navbar-collapse .navbar-nav > li:nth-child(2) {
+        margin-left: 0; }
+      .side-collapse .navbar-collapse .navbar-nav > li:nth-child(7) {
+        margin-right: 0; }
+      .side-collapse .navbar-collapse .navbar-nav > li a {
+        font-family: 'gentium_book_basicbold';
+        font-size: .9em;
+        color: white;
+        text-transform: capitalize;
         background-color: transparent;
-        border-top: 0.25em solid white;
-        margin-top: 0;
-        color: white; }
-        .side-collapse .navbar-collapse .navbar-nav > li.active a:hover {
+        padding-top: 2.5em;
+        margin-top: .25em;
+        outline: none; }
+        .side-collapse .navbar-collapse .navbar-nav > li a:hover {
           background-color: white;
+          border-top: 0.25em solid white;
+          margin-top: 0;
           color: #000; }
+        .side-collapse .navbar-collapse .navbar-nav > li a:focus {
+          color: white; }
+        .side-collapse .navbar-collapse .navbar-nav > li a:active {
+          color: #000; }
+      .side-collapse .navbar-collapse .navbar-nav > li.active {
+        background: transparent; }
+        .side-collapse .navbar-collapse .navbar-nav > li.active a {
+          background-color: transparent;
+          border-top: 0.25em solid white;
+          margin-top: 0;
+          color: white; }
+          .side-collapse .navbar-collapse .navbar-nav > li.active a:hover {
+            background-color: white;
+            color: #000; }
   .side-collapse .navbar-collapse .navbar-nav .rs {
     padding-top: 2.5em; }
     .side-collapse .navbar-collapse .navbar-nav .rs .social {
@@ -350,6 +352,10 @@ section {
     margin: 0 auto;
     margin-bottom: 1.42857em;
     float: none; }
+    .reservations-section .container .row > .col-xs-12:nth-child(2) form .form-group:first-child {
+      display: block; }
+    .reservations-section .container .row > .col-xs-12:nth-child(2) form .form-group.has-error input {
+      border-color: #ec100c; }
   .reservations-section .container .row > .col-xs-12:nth-child(2) form label {
     font-family: "open_sansbold";
     font-size: 1em; }
@@ -359,11 +365,23 @@ section {
       border-color: #cc9900; }
   .reservations-section .container .row > .col-xs-12:nth-child(2) form select {
     border-radius: 0 !important; }
-  .reservations-section .container .row > .col-xs-12:nth-child(2) form button {
-    padding: .75em 3em;
-    font-family: "open_sansregular";
-    font-size: 1em;
-    outline: none; }
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form .submit {
+    width: calc(100% - 1.5em) !important;
+    max-width: none;
+    float: none !important;
+    padding: 0 !important;
+    text-align: center !important;
+    margin-right: 0 !important; }
+    .reservations-section .container .row > .col-xs-12:nth-child(2) form .submit button {
+      padding: .75em 3em;
+      font-family: "open_sansregular";
+      font-size: 1em;
+      outline: none;
+      margin: 0 auto; }
+  .reservations-section .container .row > .col-xs-12:nth-child(2) form #msgSubmit {
+    margin-bottom: 1.5em;
+    font-family: "latoregular";
+    font-size: 3rem; }
 
 .menu-section .container .row .col-sm-6 {
   padding: 0 1.42857em; }

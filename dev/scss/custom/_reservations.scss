@@ -1,0 +1,184 @@
+/* ===========================
+      RESERVATION DECO
+=========================== */
+.reservations-section .container .row > .r-deco{
+    display: none;
+}
+
+@media(min-width: 768px){
+    .reservations-section .container .row > .r-deco{
+        display: flex;
+
+        align-items: center;
+
+        img:last-child{
+            display: none;
+        }
+    }
+}
+
+
+@media(min-width: 992px){
+    .reservations-section .container .row > .r-deco img{
+        float: left;
+        max-width: calc( 50% - 1.25em);
+
+        &:first-child{
+            margin-right: 1.25em;
+        }
+
+        &:last-child{
+            display: block;
+        }
+    }
+}
+
+
+
+
+/* ===========================
+      RESERVATION CONTENT
+=========================== */
+.reservations-section .container .row > .r-content{
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+
+
+/* ===========================
+       RESERVATION FORM
+=========================== */
+.reservations-section .container .row{
+    > .r-content form{
+        max-width: 430px;
+        margin: 0 auto;
+
+        *{
+            outline: none;
+        }
+    }
+}
+
+
+
+
+/* =============================
+     RESERVATION FORM-GROUP
+============================= */
+.reservations-section .container .row{
+    .form-group{
+        float: none;
+        width: calc(100% - (1.4em /2));
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 1.4em;
+        text-align: left;
+
+        &:first-child{
+            display: block;
+        }
+
+        &.has-error{
+            input{
+                border-color: #DC3545;
+            }
+        }
+    }
+}
+
+
+
+
+/* =============================
+    RESERVATION FORM CONTENT
+============================= */
+.reservations-section .container .row > .r-content form{
+    .form-control:focus{
+        box-shadow: 0 0 0 .15rem rgba($color-theme-primary, .25);
+    }
+
+    label{
+        font-family: $font-family-bold;
+        font-size: 1em;
+    }
+
+    input, select{
+        border-color: $gray-400;
+
+        &:focus{
+            border-color: $color-theme-primary;
+        }
+    }
+
+    select{
+        border-radius: 0 !important;
+    }
+
+    .submit{
+        float: none !important;
+        width: calc(100% - 1.5em) !important;
+        max-width: none;
+        padding: 0 !important;
+        text-align: center !important;
+
+        button{
+            padding: .75em 3em;
+            margin: 0 auto;
+            font-family: $font-family-basic;
+            font-size: 1em;
+            color: #000;
+            outline: none;
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+/* ===============================
+     RESERVATION FORM MESSAGES
+=============================== */
+.reservations-section .container .row > .r-content form{
+    #msgSubmit{
+        margin-bottom: 1.5em;
+        font-family: $font-family-content;
+        font-size: 1.75rem;
+    }
+
+    .help-block{
+        font-family: $font-family-content;
+        font-size: .85em;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+@media(min-width: 768px){
+    .reservations-section .container .row{
+        .r-content form{
+            max-width: 430px;
+            margin: 0 auto;
+
+            .form-group{
+                float: left;
+                width: calc(50% - (1.5em /2));
+                margin-bottom: 1.25em;
+                text-align: left;
+
+                flex: auto;
+
+                &:nth-child(2n){
+                    margin-left: 1.5em;
+                }
+            }
+        }
+    }
+}

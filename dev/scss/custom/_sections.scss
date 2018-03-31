@@ -1,0 +1,85 @@
+/* ===========================
+           SECTIONS
+=========================== */
+section{
+    display: flex;
+    min-height: 100%;
+    padding: 1.5em;
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+
+    justify-content: center;
+
+    &:nth-child(odd){
+        background-color: lighten($gray-400, 15%);
+        background-repeat: repeat;
+        background-position: center;
+        background-size: auto;
+    }
+
+    &:nth-child(even){
+        background-color: $gray-100;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &.home-section{
+        background-image: url(../img/bg-home-section.jpg);
+    }
+
+    &.ingredients-section{
+        background-image: url(../img/bg-ingredient-section.jpg);
+    }
+
+    &.reviews-section{
+        background-image: url(../img/bg-reviews-section.jpg);
+    }
+
+    &.about-section, &.reservations-section{
+        background-image: url(../img/motif-section.png);
+    }
+
+    &.menu-section{
+        background-image: url(../img/motif-menu-section.png);
+    }
+}
+
+
+.navbar ~ section{
+    padding-top: 4em;
+
+    .container{
+        margin-top: 1.5em;
+    }
+}
+
+
+
+
+/* ===========================
+       SECTIONS CONTENT
+=========================== */
+.section{
+    h2{
+        margin-bottom: 0;
+        font-family: $font-family-title;
+        font-size: 2.2em;
+    }
+
+    .decoration{
+        margin: .9em auto;
+        margin-bottom: 1.8em;
+    }
+
+    p{
+        width: 85%;
+        max-width: 430px;
+        margin: 0 auto;
+        margin-bottom: 1.8em;
+        font-family: $font-family-content;
+        font-size: .9em; //14px
+        text-align: center;
+    }
+}

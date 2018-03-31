@@ -1,0 +1,113 @@
+$footer-col-max-width: 370px; //370px
+
+
+
+
+/* ===========================
+            FOOTER
+=========================== */
+footer{
+    padding: 2.5em .85em;
+    background: $gray-1000;
+}
+
+
+
+
+/* ===========================
+         FOOTER BLOCK
+=========================== */
+footer .container .row .f-colum{
+    margin-bottom: 3em;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width:768px){
+    footer .container .row .f-colum{
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+/* ===========================
+     FOOTER TITLE & DECO
+=========================== */
+footer .container .row .f-colum{
+    h2{
+        margin: 0 auto;
+        font-family: $font-family-title;
+        font-size: 1.4em;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .decoration{
+        margin: .7em auto;
+        margin-bottom: 1.05em;
+        text-align: center;
+
+        img{
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+
+/* ===========================
+        FOOTER CONTENT
+=========================== */
+footer .container .row .f-colum{
+    p{
+        max-width: 350px;
+        margin: 0 auto;
+        margin-bottom: 0;
+        font-family: $font-family-basic;
+        font-size: .85em;
+        text-align: center;
+
+        span{
+            display: block;
+        }
+
+        strong{
+            font-family: $font-family-bold;
+            font-weight: bold;
+        }
+    }
+}
+
+footer .container .row .f-colum:last-child{
+    p{
+        font-family: $font-family-bold;
+    }
+}
+
+
+
+
+/* ===========================
+         FOOTER ICONS
+=========================== */
+footer .container .row .col-md-4 .social, .payment{
+    margin: 0 auto;
+    margin-top: 1.05em;
+    text-align: center;
+
+    a, span{
+        display: inline-block;
+        margin: 0 .25em;
+        font-size: 1.15em;
+        color: $white;
+    }
+
+    a:hover{
+        color: $color-theme-primary;
+    }
+}

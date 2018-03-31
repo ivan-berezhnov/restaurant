@@ -1,0 +1,99 @@
+/* ===========================
+        SECTIONS TITLE
+=========================== */
+.home-section .container .row .h-content{
+    max-width: 530px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+
+
+/* ===========================
+        SECTIONS TITLE
+=========================== */
+.home-section .container .row .h-content h1{
+    margin: 0;
+    font-family: $font-family-title;
+    font-size: 2.8em;
+    line-height: 1.1;
+}
+
+@media(min-width:768px){
+    .home-section .container .row .h-content h1{
+        font-size: 4em;
+    }
+}
+
+
+
+
+/* ===========================
+        SECTIONS DECO
+=========================== */
+.home-section .container .row .h-content .decoration{
+    margin: 2.1em 0;
+}
+
+
+
+
+/* ===========================
+        SECTIONS BTN
+=========================== */
+.home-section .container .row .h-content .link{
+    max-width: 250px;
+    margin: 0 auto;
+
+    .btn{
+        display: inline-block;
+        padding: .7em 2.1em;
+        font-family: $font-family-content;
+        font-size: 1.15em;
+        color: $white;
+        text-transform: uppercase;
+        background: rgba($btn-default-color, .6);
+        border: 1px solid $btn-default-color;
+        outline: none;
+
+        &:hover{
+            background: rgba($btn-default-color, .8);
+            transition: background .3s;
+        }
+
+        &:focus{
+            box-shadow: none;
+        }
+
+        &.btn-secondary{
+            margin-top: 1em;
+            margin-left: 0;
+            color: $white;
+            background: rgba($white, .2);
+            border: 1px solid $white;
+
+            &:hover{
+                color: $black;
+                background: rgba($white, .7);
+                transition: background .3s;
+            }
+        }
+    }
+}
+
+
+@media(min-width:768px){
+    .home-section .container .row .h-content .link{
+        max-width: none;
+
+        .btn{
+            display: inline-block;
+
+            &.btn-secondary{
+                margin-top: 0;
+                margin-left: 1em;
+            }
+        }
+    }
+}

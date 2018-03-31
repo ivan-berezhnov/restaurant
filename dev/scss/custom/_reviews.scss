@@ -1,0 +1,66 @@
+/* ===========================
+        REVIEWS SECTION
+=========================== */
+.reviews-section .container .row .r-content{
+    float: none;
+    max-width: 530px;
+    padding-top: 2.75em;
+    padding-bottom: 6.25em;
+    margin: 0 auto;
+    background: rgba($black, .7);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+    background:    -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,.6) 0%, rgba(0,0,0,.8) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,.6) 0%,rgba(0,0,0,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+    background:         radial-gradient(ellipse at center, rgba(0,0,0,.6) 0%,rgba(0,0,0,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+
+/* ===========================
+        REVIEWS TITLE
+=========================== */
+.reviews-section .container .row .r-content h2{
+    text-transform: capitalize;
+}
+
+
+
+
+/* ===========================
+        REVIEWS CONTENT
+=========================== */
+.reviews-section .container .row .r-content .content{
+    position: relative;
+    max-width: 430px;
+    margin: 0 auto;
+
+    .icon-quotes-right{
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        display: block;
+        font-size: 1.5em;
+        color: #F8F9FA;
+        text-align: left;
+        transform: rotate(180deg);
+    }
+
+    p{
+        width: 90%;
+        max-width: 440px;
+        padding-left: 1.5em;
+        margin: 0 auto;
+        font-family: $font-family-citation;
+        font-size: 1em;
+        line-height: 1.2;
+    }
+
+    .source{
+        display: inline-block;
+        margin-top: 1.1em;
+        font-family: $font-family-content;
+        font-size: .85em;
+    }
+}

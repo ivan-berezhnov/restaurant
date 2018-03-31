@@ -1,0 +1,36 @@
+/* ===========================
+        ABOUT CONTENT
+=========================== */
+.about-section .container .row .a-content{
+    p{
+        color: $black;
+    }
+
+    > img{
+        width: 100%;
+        max-width: 280px;
+        padding-left: 4.4em;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* ===========================
+         ABOUT DECO
+=========================== */
+.about-section .container .row .a-deco{
+    display: none;
+}
+
+@media(min-width:768px){
+    .about-section .container .row .a-deco{
+        display: block;
+
+        img{
+            width: 100%;
+            max-width: 570px;
+        }
+    }
+}

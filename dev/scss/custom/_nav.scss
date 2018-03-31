@@ -1,0 +1,335 @@
+/* ===========================
+            NAVBAR
+=========================== */
+.bg-dark{
+    background-color: #000 !important;
+}
+
+@media screen and (max-width: 991px){
+    .bg-dark .container{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navbar{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #mainNav.bg-dark{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
+        background:    -moz-linear-gradient(top, rgba($black,1) -50%, rgba($black,0) 90%) !important; /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba($black,1) -50%,rgba($black,0) 90%)  !important; /* Chrome10-25,Safari5.1-6 */
+        background:         linear-gradient(to bottom, rgba($black,1) -50%,rgba($black,0) 90%)  !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$black, endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+        border: none;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+
+        &.top-nav-collapse{
+            background: $black !important;
+        }
+    }
+}
+
+
+/* ===========================
+             LOGO
+=========================== */
+.navbar .navbar-brand img{
+    max-width: 78px;
+}
+
+@media screen and (min-width: 992px){
+    .navbar{
+        .navbar-brand img{
+            max-width: 95%;
+        }
+
+        &.top-nav-collapse .navbar-brand img{
+            max-width: 65%;
+        }
+    }
+}
+
+
+
+/* ===========================
+         BURGER MENU
+=========================== */
+.navbar-toggler{
+    position: relative;
+    display: block;
+    padding: .55em;
+    border: none;
+    outline: none;
+
+    &:focus{
+        border: none;
+        outline: none;
+    }
+
+    &:before{
+        position: absolute;
+        top: calc(50% - (40px / 2));
+        left: calc(50% - (40px / 2));
+        width: 40px;
+        height: 40px;
+        content: '';
+        border: 2px solid transparent;
+        border-radius: 100%;
+        transition: all .3s ease-in-out;
+    }
+}
+
+
+.navbar-toggler{
+    .icon-bar{
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: $white;
+        border-radius: 1px;
+        transition: all .3s ease-in-out;
+
+        + .icon-bar{
+            margin-top: 4px;
+        }
+    }
+
+    &:hover .icon-bar{
+        background-color: $color-theme-primary;
+    }
+
+    &.is-active{
+        transform: rotate(45deg);
+
+        .icon-bar:nth-child(3){
+            opacity: 0;
+        }
+        .icon-bar:nth-child(2){
+            transform: translateY(6px);
+        }
+        .icon-bar:nth-child(4){
+            transform: translateY(-6px) rotate(90deg);
+        }
+
+        &:before{
+            border-color: $white;
+        }
+        &:hover:before{
+            border-color: $color-theme-primary;
+        }
+    }
+}
+
+
+
+
+/* ===========================
+     NAVIGATION CONTAINER
+=========================== */
+.navbar .navbar-collapse{
+    position: fixed;
+    top: 72px;
+    right: -200px;
+    bottom: 0;
+    width: 200px;
+    height: calc(100vh - 72px) !important;
+    overflow: hidden;
+    transition: right .2s;
+
+    &.show{
+        right: 0;
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .navbar .navbar-collapse{
+        position: relative;
+        top: 0;
+        right: auto;
+        width: auto;
+        height: auto !important;
+        background: transparent !important;
+    }
+}
+
+
+
+
+/* ===========================
+      NAVIGATION CONTENT
+=========================== */
+.navbar .navbar-collapse .navbar-nav{
+    float: none !important;
+
+    > li{
+        width: 100%;
+        text-align: center;
+
+        a{
+            padding: .9em;
+            font-family: $font-family-nav;
+            font-size: 1.15em;
+            color: $white !important;
+            text-transform: capitalize;
+            border-bottom: 1px solid $color-theme-primary;
+
+            &:hover{
+                background: $color-theme-primary;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 490px) and (orientation: landscape){
+    .navbar .navbar-collapse .navbar-nav > li a{
+        padding: .2em;
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .navbar .navbar-collapse .navbar-nav{
+        width: 850px;
+
+        > li{
+            display: inline-block;
+            margin: 0 .625em;
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+            &:nth-child(6){
+                margin-right: 0;
+            }
+        }
+
+        > li a{
+            padding-top: 2.5em;
+            margin-top: .25em;
+            background-color: transparent;
+            border-bottom: 0;
+            border-bottom: none;
+            outline: none;
+
+            &:hover{
+                height: 100%;
+                margin-top: 0;
+                color: $black !important;
+                background-color: $white;
+            }
+
+            &:focus{
+                color: $white !important;
+                outline: none;
+            }
+
+            &:active{
+                color: $black !important;
+            }
+
+            &.active{
+                margin-top: 0;
+                color: $white  !important;
+                background-color: transparent;
+                border-top: .25em solid $white;
+
+                &:hover{
+                    color: $black !important;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .navbar.top-nav-collapse .navbar-collapse .navbar-nav > li a{
+        padding-top: 1.35em;
+    }
+}
+
+
+
+
+/* ==============================
+      NAVIGATION CONTENT RS
+============================== */
+.navbar .navbar-collapse .navbar-nav .rs{
+    position: absolute;
+    bottom: .7em;
+    width: 100%;
+    height: 2.15em;
+    text-align: center;
+
+    li{
+        display: inline-block;
+        outline: none;
+
+        a{
+            margin: 0 .3em;
+            font-size: 1.3em;
+            color: $color-theme-secondary;
+            outline: none;
+
+            &:focus{
+                color: $color-theme-secondary;
+            }
+            &:hover{
+                color: $white;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 568px) and (orientation: portrait){
+    .navbar .navbar-collapse .navbar-nav .rs{
+        bottom: 0;
+    }
+}
+
+@media screen and (max-height: 490px) and (orientation: landscape){
+    .navbar .navbar-collapse .navbar-nav .rs{
+        bottom: 0;
+    }
+}
+
+
+@media screen and (min-width: 992px){
+    .navbar .navbar-collapse .navbar-nav .rs{
+        position: relative;
+        bottom: auto;
+        display: inline-flex;
+        padding-top: 3em;
+
+        .social{
+            margin: 0px;
+
+            a{
+                padding-right: 3px;
+                padding-left: 3px;
+                color: $color-theme-secondary;
+
+                &:hover, &:focus{
+                    color: $color-theme-secondary;
+                }
+
+                &:hover{
+                    margin-top: .25em;
+                    color: $white;
+                    background: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .navbar.top-nav-collapse .navbar-collapse .navbar-nav .rs{
+        padding-top: 1.7em;
+    }
+}

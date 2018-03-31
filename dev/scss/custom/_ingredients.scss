@@ -1,0 +1,54 @@
+/* ===========================
+      INGREDIENTS CONTENT
+=========================== */
+.ingredients-section .container .row .i-content{
+    display: inline-block;
+    max-width: 530px;
+    padding: 2.75em;
+    padding-top: 3em;
+    margin: 0 auto;
+    background: rgba($black, .7);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.63+0,1+100 */
+    background:    -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,.4) 0%, rgba(0,0,0,.7) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,.4) 0%,rgba(0,0,0,.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background:         radial-gradient(ellipse at center, rgba(0,0,0,.4) 0%,rgba(0,0,0,.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    p{
+        width: 100%;
+        margin-bottom: 1.8em;
+    }
+}
+
+@media(min-width:768px){
+    .ingredients-section .container .row .i-content{
+        margin-left: 50%;
+    }
+}
+
+
+
+
+/* ===========================
+      INGREDIENTS THUMBS
+=========================== */
+.ingredients-section .container .row .i-content{
+    .i-thumbs{
+        float: left;
+        padding: 0 .5em;
+
+        img{
+            width: 90%;
+            max-width: 100px;
+            margin: 0 auto;
+            border: .25em solid rgba($white, .1);
+            border-radius: 100%;
+        }
+
+        @media(min-width:768px){
+            img{
+                width: 80%;
+            }
+        }
+    }
+}

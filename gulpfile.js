@@ -124,6 +124,9 @@ gulp.task('default', [ 'copy', 'csscomb', 'lib', 'css', /* 'js', */ 'clean' ], f
     gulp.src('dev/js/vendor/**')
         .pipe(gulp.dest('dist/js/vendor'))
 
+    gulp.src('dev/php/**')
+        .pipe(gulp.dest('dist/php'))
+
     gulp.src('dev/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))

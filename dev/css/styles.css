@@ -21,7 +21,7 @@ html{
             NAVBAR
 =========================== */
 .bg-dark{
-    background-color: #000 !important;
+    background-color: #191919 !important;
 }
 
 @media screen and (max-width: 991px){
@@ -40,17 +40,17 @@ html{
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
         /* FF3.6-15 */
         /* Chrome10-25,Safari5.1-6 */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, black), color-stop(90%, transparent)) !important;
-        background: linear-gradient(to bottom, black -50%, transparent 90%) !important;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, #191919), color-stop(90%, rgba(25, 25, 25, 0))) !important;
+        background: linear-gradient(to bottom, #191919 -50%, rgba(25, 25, 25, 0) 90%) !important;
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$black, endColorstr='#00000000',GradientType=0 );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$gray-1000, endColorstr='#00000000',GradientType=0 );
         /* IE6-9 */
         border: none;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
                 transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
     #mainNav.bg-dark.top-nav-collapse{
-        background: #000 !important;
+        background: #191919 !important;
     }
 }
 
